@@ -108,6 +108,27 @@ body {
   text-align: center;
   background: var(--dark-blue);
 }
+nav,
+main,
+.hero,
+.skills,
+.projects,
+.about,
+.contact {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nav-center,
+.hero-center,
+.skills-center,
+.projects-center,
+.about-center,
+.contact-center {
+  width: var(--elements-width-1);
+}
+
 /* 
   
   
@@ -179,3 +200,10 @@ p {
   font-size: clamp(1.1rem, 0.5rem + 8.2vw, 1.6rem);
   color: var(--Grayish-Blue);
 }
+/* 
+=====================
+=====================
+    navigation 
+====================
+====================
+*/
