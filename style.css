@@ -1,0 +1,181 @@
+/* 
+=====================
+=====================
+        css reset 
+====================
+====================
+*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol[role="list"] {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* 
+=====================
+=====================
+        root 
+====================
+====================
+*/
+:root {
+  font-size: 62.5%;
+  --dark-blue: #090a1a;
+  --font-weight-1: 400;
+  --font-weight-2: 500;
+  font-family: "Rubik", sans-serif;
+  --transition-1: 0.2s;
+  --transition-2: 0.5s;
+  --elements-width-1: min(90%, 111rem);
+  --elements-width-2: min(100%, 64.8rem);
+  --elements-width-3: min(100%, 53.9rem);
+  position: relative;
+}
+body {
+  font-size: 1.8rem;
+  color: white;
+  text-align: center;
+  background: var(--dark-blue);
+}
+/* 
+  
+  
+  buttons 
+  
+  
+  */
+button {
+  background: var(--Soft-Blue);
+  border: none;
+  color: white;
+  border-radius: 0.4em;
+  padding: 0.88em 2em;
+  transition: var(--transition-1);
+  cursor: pointer;
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.089);
+}
+button:hover {
+  background: white;
+  box-shadow: 0px 0px 0px 0.2rem var(--Soft-Blue) inset;
+  color: var(--Soft-Blue);
+}
+.red-btn {
+  background: var(--Soft-Red);
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+.red-btn:hover {
+  background: white;
+  box-shadow: 0px 0px 0px 0.2rem var(--Soft-Red) inset;
+  color: var(--Soft-Red);
+}
+.gray-btn {
+  background: var(--Soft-Gray);
+  color: var(--Grayish-Blue);
+  box-shadow: 0rem 1rem 1rem rgba(0, 0, 0, 0.082);
+}
+.gray-btn:hover {
+  box-shadow: 0px 0px 0px 0.2rem var(--Grayish-Blue) inset;
+  color: var(--Grayish-Blue);
+}
+/* 
+  
+  
+  lists 
+  
+  
+  */
+li {
+  cursor: pointer;
+}
+/* 
+  
+  
+  titles 
+  
+  
+  */
+h1 {
+  font-size: clamp(2.3rem, 0.5rem + 7.2vw, 4.5rem);
+}
+h2 {
+  font-size: clamp(1.9rem, 0.5rem + 7.2vw, 2.9rem);
+}
+h3 {
+  font-size: clamp(1.4rem, 0.5rem + 7.2vw, 1.8rem);
+}
+p {
+  font-size: clamp(1.1rem, 0.5rem + 8.2vw, 1.6rem);
+  color: var(--Grayish-Blue);
+}
