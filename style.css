@@ -91,10 +91,12 @@ select {
 */
 :root {
   font-size: 62.5%;
-  --dark-blue: #090a1a;
-  --light-blue: #5c72eb;
-  --medium-blue: #0e0f26;
+  --blue-1: #090a1a;
+  --blue-2: #0e0f26;
+  --blue-3: #171b3c;
+  --blue-4: #5c72eb;
   --light-white: #b0b0b5;
+  --white: white;
   --font-weight-1: 400;
   --font-weight-2: 500;
   font-family: "Rubik", sans-serif;
@@ -109,7 +111,7 @@ body {
   font-size: 1.8rem;
   color: white;
   text-align: center;
-  background: var(--dark-blue);
+  background: var(--blue-1);
 }
 nav,
 main,
@@ -140,9 +142,9 @@ main,
   
   */
 button {
-  background: var(--light-blue);
+  background: var(--blue-4);
   border: none;
-  color: white;
+  color: var(--white);
   border-radius: 0.4em;
   padding: 0.3em 2.5em;
   transition: var(--transition-1);
@@ -151,8 +153,8 @@ button {
 }
 button:hover {
   background: transparent;
-  box-shadow: 0px 0px 0px 0.2rem var(--light-blue) inset;
-  color: var(--light-blue);
+  box-shadow: 0px 0px 0px 0.2rem var(--blue-4) inset;
+  color: var(--blue-4);
 }
 /* 
   
@@ -165,6 +167,18 @@ li {
   cursor: pointer;
 }
 /* 
+
+
+links 
+
+
+*/
+a,
+a:visited {
+  text-decoration: none;
+  color: var(--white);
+}
+/* 
   
   
   titles 
@@ -172,22 +186,22 @@ li {
   
   */
 h1 {
-  font-size: clamp(7.5rem, 0.5rem + 8.2vw, 11.8rem);
+  font-size: clamp(7.5rem, 8.2vw, 11.8rem);
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   opacity: 25%;
 }
 h2 {
-  font-size: clamp(2.5rem, 0.5rem + 2.08vw, 3rem);
+  font-size: clamp(2.5rem, 2.08vw, 3rem);
 }
 h3 {
-  font-size: clamp(4.2rem, 0.5rem + 4.44vw, 6.4rem);
+  font-size: clamp(4.2rem, 4.44vw, 6.4rem);
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   opacity: 25%;
 }
 p {
-  font-size: clamp(1.3rem, 0.5rem + 1.25vw, 1.8rem);
+  font-size: clamp(1.3rem, 1.25vw, 1.8rem);
   color: var(--Grayish-Blue);
 }
 /* 
@@ -200,12 +214,12 @@ forms
 
 */
 input {
-  background: var(--medium-blue);
+  background: var(--blue-2);
   border: none;
   margin-bottom: 1rem;
   padding: 0.5em 1em;
   font-size: 1.6rem;
-  color: white;
+  color: var(--white);
   border-radius: 0.3em;
 }
 input::placeholder {
@@ -222,3 +236,51 @@ input:focus {
 ====================
 ====================
 */
+.nav-center {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 3rem 2rem;
+}
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+.nav-links a:hover {
+  color: var(--blue-4);
+}
+.nav-links a {
+  padding: 0.7em 1em;
+  border-radius: 0.6em;
+}
+.active-link {
+  background: var(--blue-3);
+  color: var(--blue-4) !important;
+}
+/* 
+
+
+
+hamburger 
+
+
+
+*/
+.hamburger {
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+}
+.hamburger svg path {
+  fill: var(--white);
+}
+.hamburger:hover {
+  box-shadow: none;
+  background: transparent;
+}
+.hamburger > svg path:nth-of-type(2) {
+  display: none;
+}
+.hamburger > svg path:nth-of-type(1) {
+  display: block;
+}
