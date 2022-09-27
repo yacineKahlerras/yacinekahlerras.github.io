@@ -229,6 +229,7 @@ nav {
   align-items: center;
   justify-content: flex-end;
   padding: 3rem 2rem;
+  z-index: 99;
 }
 .nav-links {
   display: none;
@@ -442,4 +443,48 @@ input:focus,
 textarea:focus {
   border: none;
   outline: none;
+}
+
+/* 
+=====================
+=====================
+      sidemenu 
+====================
+====================
+*/
+.sidemenu {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: grid;
+  place-items: center;
+  font-weight: var(--font-weight-2);
+  transform: translate(100%, 0);
+  transition: var(--transition-2);
+  opacity: 0;
+}
+.sidemenu-center {
+  width: min(100%, 30rem);
+  background: var(--blue-1);
+  padding: 3rem 5rem;
+  border-radius: 1rem;
+}
+.sidemenu-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+.sidemenu-links li {
+  width: 100%;
+}
+.sidemenu-links li:hover {
+  color: var(--blue-4);
+}
+.sidemenu-active {
+  transform: translate(0, 0);
+  opacity: 1;
 }
