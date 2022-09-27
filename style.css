@@ -320,7 +320,63 @@ hamburger
 ====================
 ====================
 */
+.individual-project {
+  width: 100%;
+  border-radius: 1em;
+  overflow: hidden;
+  position: relative;
+}
+.projects-list {
+  display: grid;
+  align-items: center;
+  gap: 3rem;
+}
 
+/* 
+
+after 
+
+*/
+.individual-project::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: var(--transition-2);
+}
+.individual-project:hover::after {
+  opacity: 1;
+}
+
+/* 
+
+image 
+
+*/
+.individual-project img {
+  transition: var(--transition-2);
+}
+.individual-project:hover img {
+  filter: blur(0.3rem) saturate(50%);
+}
+.individual-project button {
+  background: var(--blue-3);
+  border: solid 0.2rem var(--blue-4);
+  color: var(--white);
+  font-weight: var(--font-weight-2);
+  position: absolute;
+  bottom: -25%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.individual-project:hover button {
+  bottom: 50%;
+  transform: translate(-50%, 50%);
+}
 /* 
 =====================
 =====================
