@@ -48,7 +48,6 @@ sidemenuLinks.forEach((link, index) => {
 const projectList = [...document.querySelector(".projects-list").children];
 const projectModal = document.querySelector(".project-modal");
 const closeModalBtn = document.querySelector(".close-btn");
-const modalBg = document.querySelector(".modal-bg");
 
 /** hides/shows modal */
 const modalVisibility = (isVisible) => {
@@ -72,12 +71,8 @@ closeModalBtn.addEventListener("click", () => {
   modalVisibility(false);
 });
 
-modalBg.addEventListener("click", () => {
-  modalVisibility(false);
-});
-
 projectModal.addEventListener("click", (e) => {
-  if (e.target != projectModal.children[0]) {
+  if (e.target.classList.contains("project-modal")) {
     modalVisibility(false);
   }
 });
