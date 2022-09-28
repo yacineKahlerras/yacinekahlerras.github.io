@@ -37,3 +37,47 @@ sidemenuLinks.forEach((link, index) => {
     }, 500);
   });
 });
+
+/**
+ * ==========================
+ * ==========================
+ *        project modals
+ * ==========================
+ * ==========================
+ * */
+const projectList = [...document.querySelector(".projects-list").children];
+const projectModal = document.querySelector(".project-modal");
+const closeModalBtn = document.querySelector(".close-btn");
+const modalBg = document.querySelector(".modal-bg");
+
+/** hides/shows modal */
+const modalVisibility = (isVisible) => {
+  if (isVisible) {
+    projectModal.classList.add("show-modal");
+    document.body.style.overflowY = "hidden";
+  } else {
+    projectModal.classList.remove("show-modal");
+    document.body.style.overflowY = "scroll";
+  }
+};
+
+/** listeners */
+projectList.forEach((p) => {
+  p.addEventListener("click", () => {
+    modalVisibility(true);
+  });
+});
+
+closeModalBtn.addEventListener("click", () => {
+  modalVisibility(false);
+});
+
+modalBg.addEventListener("click", () => {
+  modalVisibility(false);
+});
+
+projectModal.addEventListener("click", (e) => {
+  if (e.target != projectModal.children[0]) {
+    modalVisibility(false);
+  }
+});
