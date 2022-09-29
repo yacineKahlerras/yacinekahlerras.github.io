@@ -54,8 +54,8 @@ const sourceBtn = document.querySelector(".source-btn");
 const liveBtn = document.querySelector(".live-btn");
 const projectText = document.querySelector(".project-text");
 
-const projectsInfos = {
-  project: {
+const projectsInfos = [
+  {
     img: "./images/projects/project-1.png",
     source: "https://github.com/yacineKahlerras/bookmark-landing-page",
     live: "https://yacinekahlerras.github.io/bookmark-landing-page/",
@@ -69,7 +69,7 @@ const projectsInfos = {
                   nulla sed ligula. Duis semper cursus semper. Vivamus dictum maximus
                   turpis non accumsan.`,
   },
-  project: {
+  {
     img: "./images/projects/project-2.png",
     source: "https://github.com/yacineKahlerras/ip-address-tracker",
     live: "https://yacinekahlerras.github.io/ip-address-tracker/",
@@ -83,7 +83,7 @@ const projectsInfos = {
                   nulla sed ligula. Duis semper cursus semper. Vivamus dictum maximus
                   turpis non accumsan.`,
   },
-  project: {
+  {
     img: "./images/projects/project-3.png",
     source: "https://github.com/yacineKahlerras/url-shortening-api",
     live: "https://yacinekahlerras.github.io/url-shortening-api/",
@@ -97,7 +97,7 @@ const projectsInfos = {
                   nulla sed ligula. Duis semper cursus semper. Vivamus dictum maximus
                   turpis non accumsan.`,
   },
-  project: {
+  {
     img: "./images/projects/project-4.png",
     source: "https://github.com/yacineKahlerras/loopstudios-landing-page",
     live: "https://yacinekahlerras.github.io/loopstudios-landing-page/",
@@ -111,7 +111,7 @@ const projectsInfos = {
                   nulla sed ligula. Duis semper cursus semper. Vivamus dictum maximus
                   turpis non accumsan.`,
   },
-};
+];
 
 /** hides/shows modal */
 const modalVisibility = (isVisible, index) => {
@@ -128,6 +128,10 @@ const modalVisibility = (isVisible, index) => {
 /** updates modal info */
 const updateModalInfo = (index) => {
   const project = projectsInfos[index];
+  projectImg.src = project.img;
+  sourceBtn.href = project.source;
+  liveBtn.href = project.live;
+  projectText.textContent = project.description;
 };
 
 /** listeners */
