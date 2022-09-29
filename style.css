@@ -95,7 +95,7 @@ select {
   --blue-2: #0e0f26;
   --blue-3: #171b3c;
   --blue-4: #5c72eb;
-  --green: #53db4e;
+  --green: #43a540;
   --red: #df4545;
   --orange: #eb9c5c;
   --light-white: #b0b0b5;
@@ -216,6 +216,17 @@ h3 {
 p {
   font-size: clamp(1.3rem, 1.25vw, 1.8rem);
   color: var(--Grayish-Blue);
+}
+
+@keyframes slideDown {
+  0%,
+  100% {
+    top: -10rem;
+  }
+  10%,
+  90% {
+    top: 3rem;
+  }
 }
 
 /* 
@@ -746,4 +757,31 @@ modal text
   text-align: justify;
   text-transform: capitalize;
   line-height: 2;
+}
+
+/* 
+====================================
+====================================
+           notification
+====================================
+====================================
+*/
+.note {
+  width: var(--elements-width-2);
+  border-radius: 0.3em;
+  padding: 1em;
+  position: fixed;
+  z-index: 2;
+  top: -120%;
+  left: 50%;
+  background: var(--green);
+  color: var(--White);
+  font-weight: var(--font-weight-2);
+  text-align: center;
+  transform: translate(-50%, 0);
+  z-index: 100;
+  transition: 0.5s ease-in-out;
+}
+.note-active {
+  animation: slideDown 2.5s 0s 1 ease-in-out forwards;
 }

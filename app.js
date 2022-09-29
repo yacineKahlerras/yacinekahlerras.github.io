@@ -166,6 +166,8 @@ const NAME_NEEDED_ERROR = "dont forget to give your name !";
 const EMAIL_NEEDED_ERROR = "email is needed for contacting !";
 const EMAIL_FORMAT_ERROR = "Whoops, wrong email format";
 
+const notification = document.querySelector(".note");
+
 /** checks if field has a value */
 const hasValue = (input, FIELD_NEEDED_ERROR) => {
   const inputValue = input.value.trim();
@@ -207,6 +209,15 @@ const validateEmail = (input, EMAIL_NEEDED_ERROR, EMAIL_FORMAT_ERROR) => {
   return true;
 };
 
+/** shows notification */
+const showNotification = () => {
+  notification.classList.add("note-active");
+
+  setTimeout(() => {
+    notification.classList.remove("note-active");
+  }, 3000);
+};
+
 /** when submitting */
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -219,6 +230,6 @@ form.addEventListener("submit", (e) => {
   );
 
   if (nameValid && emailValid) {
-    alert("nigga we swoooooopiiiiiiin");
+    showNotification();
   }
 });
