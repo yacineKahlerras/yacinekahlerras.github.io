@@ -554,6 +554,11 @@ form
 form > div {
   width: 100%;
   text-align: left;
+  margin-bottom: 1rem;
+}
+small {
+  color: var(--red);
+  transition: var(--transition-1);
 }
 
 /* 
@@ -568,12 +573,13 @@ textarea {
   width: 100%;
   background: var(--blue-2);
   border: none;
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
   padding: 0.5em 1em;
   font-size: 1.6rem;
   color: var(--white);
   border-radius: 0.3em;
   resize: none;
+  transition: var(--transition-1);
 }
 input::placeholder,
 textarea::placeholder {
@@ -583,9 +589,6 @@ input:focus,
 textarea:focus {
   border: solid 0.2rem var(--orange);
   outline: none;
-}
-.input-success {
-  border: solid 0.2rem var(--green);
 }
 .input-error {
   border: solid 0.2rem var(--red);

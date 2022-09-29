@@ -162,9 +162,9 @@ const form = document.querySelector(".form");
 const nameErrorMsg = document.querySelector(".name-error-msg");
 const emailErrorMsg = document.querySelector(".email-error-msg");
 
-const NAME_NEEDED_ERROR = "name is needed.";
-const EMAIL_NEEDED_ERROR = "email is needed.";
-const EMAIL_FORMAT_ERROR = "wrong email format.";
+const NAME_NEEDED_ERROR = "dont forget to give your name !";
+const EMAIL_NEEDED_ERROR = "email is needed for contacting !";
+const EMAIL_FORMAT_ERROR = "Whoops, wrong email format";
 
 /** checks if field has a value */
 const hasValue = (input, FIELD_NEEDED_ERROR) => {
