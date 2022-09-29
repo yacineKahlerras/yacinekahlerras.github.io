@@ -41,6 +41,32 @@ sidemenuLinks.forEach((link, index) => {
 /**
  * ==========================
  * ==========================
+ *      navigation links
+ * ==========================
+ * ==========================
+ * */
+const navLinks = [...document.querySelector(".nav-links").children];
+
+navLinks.forEach((link, index) => {
+  link.addEventListener("click", () => {
+    document.querySelector(".active-link").classList.remove("active-link");
+    link.firstElementChild.classList.add("active-link");
+
+    // scrolls down to the section
+    setTimeout(() => {
+      let elementAling = index == 2 ? "start" : "center";
+      bodySections[index].scrollIntoView({
+        behavior: "smooth",
+        block: `${elementAling}`,
+        inline: "center",
+      });
+    }, 400);
+  });
+});
+
+/**
+ * ==========================
+ * ==========================
  *        project modals
  * ==========================
  * ==========================
@@ -168,6 +194,8 @@ const EMAIL_FORMAT_ERROR = "Whoops, wrong email format";
 
 const notification = document.querySelector(".note");
 
+emailjs.init("_2e0ipBCFq4DOUHiE");
+
 /** checks if field has a value */
 const hasValue = (input, FIELD_NEEDED_ERROR) => {
   const inputValue = input.value.trim();
@@ -209,6 +237,19 @@ const validateEmail = (input, EMAIL_NEEDED_ERROR, EMAIL_FORMAT_ERROR) => {
   return true;
 };
 
+/** sends an email using emailJS */
+const sendToMyEmail = () => {
+  const name = form.elements["name"].value.trim();
+  const email = form.elements["email"].value.trim();
+  const message = form.elements["message"].value.trim();
+
+  emailjs.send("service_8fjnxfi", "template_xgm7lnu", {
+    name_id: name,
+    email_id: email,
+    message: message,
+  });
+};
+
 /** shows notification */
 const showNotification = () => {
   notification.classList.add("note-active");
@@ -231,5 +272,6 @@ form.addEventListener("submit", (e) => {
 
   if (nameValid && emailValid) {
     showNotification();
+    // sendToMyEmail();
   }
 });
