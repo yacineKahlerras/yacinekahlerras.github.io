@@ -95,6 +95,9 @@ select {
   --blue-2: #0e0f26;
   --blue-3: #171b3c;
   --blue-4: #5c72eb;
+  --green: #53db4e;
+  --red: #df4545;
+  --orange: #eb9c5c;
   --light-white: #b0b0b5;
   --white: white;
   --font-weight-1: 400;
@@ -540,6 +543,28 @@ image
 .contact-center {
   width: var(--elements-width-2);
 }
+
+/* 
+
+
+form 
+
+
+*/
+form > div {
+  width: 100%;
+  text-align: left;
+}
+small {
+}
+
+/* 
+
+
+input 
+
+
+*/
 input,
 textarea {
   width: 100%;
@@ -558,8 +583,14 @@ textarea::placeholder {
 }
 input:focus,
 textarea:focus {
-  border: none;
+  border: solid 0.2rem var(--orange);
   outline: none;
+}
+.input-success {
+  border: solid 0.2rem var(--green);
+}
+.input-error {
+  border: solid 0.2rem var(--red);
 }
 
 /* 

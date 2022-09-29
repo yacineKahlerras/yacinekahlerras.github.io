@@ -158,3 +158,67 @@ projectModal.addEventListener("click", (e) => {
  * ==========================
  * ==========================
  * */
+const form = document.querySelector(".form");
+const nameErrorMsg = document.querySelector(".name-error-msg");
+const emailErrorMsg = document.querySelector(".email-error-msg");
+
+const NAME_NEEDED_ERROR = "name is needed.";
+const EMAIL_NEEDED_ERROR = "email is needed.";
+const EMAIL_FORMAT_ERROR = "wrong email format.";
+
+/** checks if field has a value */
+const hasValue = (input, FIELD_NEEDED_ERROR) => {
+  const inputValue = input.value.trim();
+  if (inputValue == "") {
+    return showError(input, FIELD_NEEDED_ERROR);
+  }
+  return showSuccess(input);
+};
+
+/** shows a message or effect */
+const showMessage = (input, message, type) => {
+  const errorMessage = input.nextElementSibling;
+  errorMessage.textContent = message;
+
+  input.classList = type ? "input-success" : "input-error";
+  return type;
+};
+
+/** shows success effect */
+const showSuccess = (input) => {
+  return showMessage(input, "", true);
+};
+
+/** shows error effect */
+const showError = (input, errorMsg) => {
+  return showMessage(input, errorMsg, false);
+};
+
+/** checks email value and its format */
+const validateEmail = (input, EMAIL_NEEDED_ERROR, EMAIL_FORMAT_ERROR) => {
+  if (!hasValue(input, EMAIL_NEEDED_ERROR)) return false;
+
+  const emailRegex =
+    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  const emailInputValue = input.value.trim();
+  if (!emailRegex.test(emailInputValue)) {
+    return showError(input, EMAIL_FORMAT_ERROR);
+  }
+  return true;
+};
+
+/** when submitting */
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const nameValid = hasValue(form.elements["name"], NAME_NEEDED_ERROR);
+
+  const emailValid = validateEmail(
+    form.elements["email"],
+    EMAIL_NEEDED_ERROR,
+    EMAIL_FORMAT_ERROR
+  );
+
+  if (nameValid && emailValid) {
+    alert("nigga we swoooooopiiiiiiin");
+  }
+});

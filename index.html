@@ -574,9 +574,27 @@
           <h3>Contact</h3>
 
           <!-- contact form -->
-          <form>
-            <input type="text" placeholder="Your Name*" />
-            <input type="email" placeholder="Your Email*" />
+          <form class="form" novalidate>
+            <div class="name-field">
+              <input
+                class="input-error"
+                name="name"
+                type="text"
+                placeholder="Your Name*"
+              />
+              <small class="name-error-msg"></small>
+            </div>
+
+            <div class="email-field">
+              <input
+                class="input-success"
+                name="email"
+                type="email"
+                placeholder="Your Email*"
+              />
+              <small class="email-error-msg"></small>
+            </div>
+
             <textarea
               name="message"
               id=""
