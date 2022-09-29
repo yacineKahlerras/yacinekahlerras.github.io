@@ -664,7 +664,7 @@ modal btns
   gap: 2rem;
   margin-bottom: 3rem;
 }
-.modal-center button {
+.modal-center a {
   background: transparent;
   box-shadow: 0px 0px 0px 0.2rem var(--blue-4) inset;
   padding: 0.6em 1em;
@@ -673,16 +673,18 @@ modal btns
   align-items: center;
   gap: 1rem;
   font-size: clamp(1.3rem, 1.25vw, 1.8rem);
+  border-radius: 0.5em;
+  transition: var(--transition-1);
 }
-.modal-center button:active {
+.modal-center a:active {
   box-shadow: 0px 0px 0px 0.2rem var(--white) inset;
   color: var(--white);
 }
-.modal-center button svg path {
+.modal-center a svg path {
   transition: var(--transition-1);
   fill: var(--blue-4);
 }
-.modal-center button:active svg path {
+.modal-center a:active svg path {
   fill: var(--white);
 }
 /* 

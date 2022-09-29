@@ -49,21 +49,91 @@ const projectList = [...document.querySelector(".projects-list").children];
 const projectModal = document.querySelector(".project-modal");
 const closeModalBtn = document.querySelector(".close-btn");
 
+const projectImg = document.querySelector(".project-modal-img");
+const sourceBtn = document.querySelector(".source-btn");
+const liveBtn = document.querySelector(".live-btn");
+const projectText = document.querySelector(".project-text");
+
+const projectsInfos = {
+  project: {
+    img: "./images/projects/project-1.png",
+    source: "https://github.com/yacineKahlerras/bookmark-landing-page",
+    live: "https://yacinekahlerras.github.io/bookmark-landing-page/",
+    description: `Suspendisse viverra, nunc sed convallis cursus, mi erat scelerisque
+                  dui, id pretium orci mi porttitor ipsum. Maecenas in auctor ligula,
+                  sit amet vulputate sapien. Morbi congue dignissim consequat. Nunc at
+                  maximus nunc. <br />
+
+                  Nullam vehicula quis tellus nec tempor. Aliquam pretium, quam quis
+                  porttitor vulputate, orci nulla viverra massa, nec condimentum ante
+                  nulla sed ligula. Duis semper cursus semper. Vivamus dictum maximus
+                  turpis non accumsan.`,
+  },
+  project: {
+    img: "./images/projects/project-2.png",
+    source: "https://github.com/yacineKahlerras/ip-address-tracker",
+    live: "https://yacinekahlerras.github.io/ip-address-tracker/",
+    description: `Suspendisse viverra, nunc sed convallis cursus, mi erat scelerisque
+                  dui, id pretium orci mi porttitor ipsum. Maecenas in auctor ligula,
+                  sit amet vulputate sapien. Morbi congue dignissim consequat. Nunc at
+                  maximus nunc. <br />
+
+                  Nullam vehicula quis tellus nec tempor. Aliquam pretium, quam quis
+                  porttitor vulputate, orci nulla viverra massa, nec condimentum ante
+                  nulla sed ligula. Duis semper cursus semper. Vivamus dictum maximus
+                  turpis non accumsan.`,
+  },
+  project: {
+    img: "./images/projects/project-3.png",
+    source: "https://github.com/yacineKahlerras/url-shortening-api",
+    live: "https://yacinekahlerras.github.io/url-shortening-api/",
+    description: `Suspendisse viverra, nunc sed convallis cursus, mi erat scelerisque
+                  dui, id pretium orci mi porttitor ipsum. Maecenas in auctor ligula,
+                  sit amet vulputate sapien. Morbi congue dignissim consequat. Nunc at
+                  maximus nunc. <br />
+
+                  Nullam vehicula quis tellus nec tempor. Aliquam pretium, quam quis
+                  porttitor vulputate, orci nulla viverra massa, nec condimentum ante
+                  nulla sed ligula. Duis semper cursus semper. Vivamus dictum maximus
+                  turpis non accumsan.`,
+  },
+  project: {
+    img: "./images/projects/project-4.png",
+    source: "https://github.com/yacineKahlerras/loopstudios-landing-page",
+    live: "https://yacinekahlerras.github.io/loopstudios-landing-page/",
+    description: `Suspendisse viverra, nunc sed convallis cursus, mi erat scelerisque
+                  dui, id pretium orci mi porttitor ipsum. Maecenas in auctor ligula,
+                  sit amet vulputate sapien. Morbi congue dignissim consequat. Nunc at
+                  maximus nunc. <br />
+
+                  Nullam vehicula quis tellus nec tempor. Aliquam pretium, quam quis
+                  porttitor vulputate, orci nulla viverra massa, nec condimentum ante
+                  nulla sed ligula. Duis semper cursus semper. Vivamus dictum maximus
+                  turpis non accumsan.`,
+  },
+};
+
 /** hides/shows modal */
-const modalVisibility = (isVisible) => {
+const modalVisibility = (isVisible, index) => {
   if (isVisible) {
     projectModal.classList.add("show-modal");
     document.body.style.overflowY = "hidden";
+    updateModalInfo(index);
   } else {
     projectModal.classList.remove("show-modal");
     document.body.style.overflowY = "scroll";
   }
 };
 
+/** updates modal info */
+const updateModalInfo = (index) => {
+  const project = projectsInfos[index];
+};
+
 /** listeners */
-projectList.forEach((p) => {
+projectList.forEach((p, index) => {
   p.addEventListener("click", () => {
-    modalVisibility(true);
+    modalVisibility(true, index);
   });
 });
 
