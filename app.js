@@ -75,7 +75,9 @@ const projectList = [...document.querySelector(".projects-list").children];
 const projectModal = document.querySelector(".project-modal");
 const closeModalBtn = document.querySelector(".close-btn");
 
-const projectImg = document.querySelector(".project-modal-img");
+const projectImgContainer = document.querySelector(
+  ".project-modal-img-container"
+);
 const sourceBtn = document.querySelector(".source-btn");
 const liveBtn = document.querySelector(".live-btn");
 const projectText = document.querySelector(".project-text");
@@ -154,7 +156,7 @@ const modalVisibility = (isVisible, index) => {
 /** updates modal info */
 const updateModalInfo = (index) => {
   const project = projectsInfos[index];
-  projectImg.src = project.img;
+  projectImgContainer.firstElementChild.src = project.img;
   sourceBtn.href = project.source;
   liveBtn.href = project.live;
   projectText.textContent = project.description;
@@ -164,6 +166,7 @@ const updateModalInfo = (index) => {
 projectList.forEach((p, index) => {
   p.addEventListener("click", () => {
     modalVisibility(true, index);
+    doAnimation(index);
   });
 });
 
@@ -176,6 +179,21 @@ projectModal.addEventListener("click", (e) => {
     modalVisibility(false);
   }
 });
+
+/** when click:
+ * -get project image position
+ * -get project image width
+ * -make the modal image same width and position
+ * -move the modal image to its proper place
+ */
+const doAnimation = (index) => {
+  const elemRect = projectList[index].getBoundingClientRect();
+  projectImgContainer.style.position = "fixed";
+  projectImgContainer.style.top = `${elemRect.top}px`;
+  projectImgContainer.style.left = `${elemRect.left}px`;
+  projectImgContainer.style.width = `${elemRect.right - elemRect.left}px`;
+  projectImgContainer.style.height = `${elemRect.bottom - elemRect.top}px`;
+};
 
 /**
  * ==========================

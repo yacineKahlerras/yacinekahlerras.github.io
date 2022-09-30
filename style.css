@@ -781,10 +781,17 @@ modal image
 
 
 */
-.modal-center img {
+.project-modal-img-container {
   width: var(--elements-width-4);
   border-radius: 1rem;
   margin-bottom: 2rem;
+}
+.project-modal-img-container img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  object-fit: cover;
 }
 /* 
 
