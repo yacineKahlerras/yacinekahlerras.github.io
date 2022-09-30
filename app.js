@@ -180,12 +180,7 @@ projectModal.addEventListener("click", (e) => {
   }
 });
 
-/** when click:
- * -get project image position
- * -get project image width
- * -make the modal image same width and position
- * -move the modal image to its proper place
- */
+/** animates the project pic */
 const doAnimation = (index) => {
   projectImgContainer.style = "none";
   const elemRect = projectList[index].getBoundingClientRect();
