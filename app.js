@@ -198,10 +198,9 @@ const doAnimation = (index) => {
   setTimeout(() => {
     projectImgContainer.style.top = `0px`;
     projectImgContainer.style.left = `0px`;
-    // projectImgContainer.style.width = `var(--elements-width-4)`;
-    // projectImgContainer.style.height = `auto`;
   }, 500);
 };
+// weird bug fix
 doAnimation(0);
 
 /**

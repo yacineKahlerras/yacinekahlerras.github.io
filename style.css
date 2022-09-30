@@ -710,7 +710,7 @@ textarea:focus {
   overflow-y: scroll;
   opacity: 0;
   z-index: -1;
-  transition: var(--transition-3);
+  transition: var(--transition-2);
   background: rgba(0, 0, 0, 0.7);
 }
 .show-modal {
