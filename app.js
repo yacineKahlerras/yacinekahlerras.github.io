@@ -187,13 +187,22 @@ projectModal.addEventListener("click", (e) => {
  * -move the modal image to its proper place
  */
 const doAnimation = (index) => {
+  projectImgContainer.style = "none";
   const elemRect = projectList[index].getBoundingClientRect();
-  projectImgContainer.style.position = "fixed";
-  projectImgContainer.style.top = `${elemRect.top}px`;
-  projectImgContainer.style.left = `${elemRect.left}px`;
+  const imgRect = projectImgContainer.getBoundingClientRect();
   projectImgContainer.style.width = `${elemRect.right - elemRect.left}px`;
   projectImgContainer.style.height = `${elemRect.bottom - elemRect.top}px`;
+  projectImgContainer.style.top = `${elemRect.top - imgRect.top}px`;
+  projectImgContainer.style.left = `${elemRect.left - imgRect.left}px`;
+
+  setTimeout(() => {
+    projectImgContainer.style.top = `0px`;
+    projectImgContainer.style.left = `0px`;
+    // projectImgContainer.style.width = `var(--elements-width-4)`;
+    // projectImgContainer.style.height = `auto`;
+  }, 500);
 };
+doAnimation(0);
 
 /**
  * ==========================
