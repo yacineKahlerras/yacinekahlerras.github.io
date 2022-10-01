@@ -37,6 +37,11 @@ sidemenuLinks.forEach((link, index) => {
     }, 500);
   });
 });
+sidemenu.addEventListener("click", (e) => {
+  if (e.target.classList.contains("sidemenu")) {
+    sidemenuVisibility();
+  }
+});
 
 /**
  * ==========================

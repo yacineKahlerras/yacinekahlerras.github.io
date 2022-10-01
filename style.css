@@ -839,7 +839,7 @@ textarea:focus {
   display: grid;
   place-items: center;
   font-weight: var(--font-weight-2);
-  transform: translate(100%, 0);
+  /* transform: translate(100%, 0); */
   transition: var(--transition-2);
   opacity: 0;
 }
@@ -848,6 +848,9 @@ textarea:focus {
   background: var(--blue-1);
   padding: 3rem 5rem;
   border-radius: 1rem;
+
+  transition: var(--transition-2);
+  transform: translate(200%, 0);
 }
 .sidemenu-links {
   display: flex;
@@ -861,9 +864,17 @@ textarea:focus {
 .sidemenu-links li:hover {
   color: var(--blue-4);
 }
+
+/* 
+
+active sidemenu 
+
+*/
 .sidemenu-active {
-  transform: translate(0, 0);
   opacity: 1;
+}
+.sidemenu-active .sidemenu-center {
+  transform: translate(0, 0);
 }
 
 /* 
