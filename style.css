@@ -839,9 +839,9 @@ textarea:focus {
   display: grid;
   place-items: center;
   font-weight: var(--font-weight-2);
-  /* transform: translate(100%, 0); */
   transition: var(--transition-2);
   opacity: 0;
+  z-index: -1;
 }
 .sidemenu-center {
   width: min(100%, 30rem);
@@ -872,6 +872,7 @@ active sidemenu
 */
 .sidemenu-active {
   opacity: 1;
+  z-index: 1;
 }
 .sidemenu-active .sidemenu-center {
   transform: translate(0, 0);
