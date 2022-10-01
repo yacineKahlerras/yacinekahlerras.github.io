@@ -369,8 +369,9 @@ hamburger animation
 */
 
 #nav-icon2 {
-  width: 60px;
-  height: 45px;
+  --icon-size: 5rem;
+  width: var(--icon-size);
+  height: calc(var(--icon-size) / 1.33);
   position: relative;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -383,11 +384,11 @@ hamburger animation
   cursor: pointer;
 }
 
-/* Icon 2 */
+/* span */
 #nav-icon2 span {
   display: block;
   position: absolute;
-  height: 9px;
+  height: 20%;
   width: 50%;
   background: var(--white);
   opacity: 1;
@@ -403,12 +404,12 @@ hamburger animation
 
 #nav-icon2 span:nth-child(even) {
   left: 50%;
-  border-radius: 0 9px 9px 0;
+  border-radius: 0 1rem 1rem 0;
 }
 
 #nav-icon2 span:nth-child(odd) {
   left: 0px;
-  border-radius: 9px 0 0 9px;
+  border-radius: 1rem 0 0 1rem;
 }
 
 #nav-icon2 span:nth-child(1),
@@ -418,12 +419,12 @@ hamburger animation
 
 #nav-icon2 span:nth-child(3),
 #nav-icon2 span:nth-child(4) {
-  top: 18px;
+  top: 40%;
 }
 
 #nav-icon2 span:nth-child(5),
 #nav-icon2 span:nth-child(6) {
-  top: 36px;
+  top: 80%;
 }
 
 #nav-icon2.open span:nth-child(1),
@@ -443,13 +444,13 @@ hamburger animation
 }
 
 #nav-icon2.open span:nth-child(1) {
-  left: 5px;
-  top: 7px;
+  left: 8.33%;
+  top: 15.55%;
 }
 
 #nav-icon2.open span:nth-child(2) {
-  left: calc(50% - 5px);
-  top: 7px;
+  left: calc(50% - 8.33%);
+  top: 15.55%;
 }
 
 #nav-icon2.open span:nth-child(3) {
@@ -463,13 +464,13 @@ hamburger animation
 }
 
 #nav-icon2.open span:nth-child(5) {
-  left: 5px;
-  top: 29px;
+  left: 8.33%;
+  top: 64.44%;
 }
 
 #nav-icon2.open span:nth-child(6) {
-  left: calc(50% - 5px);
-  top: 29px;
+  left: calc(50% - 8.33%);
+  top: 64.44%;
 }
 
 /* 
