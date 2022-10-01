@@ -110,7 +110,7 @@ select {
   --elements-width-2: min(90%, 42.2rem);
   --elements-width-3: min(90%, 90rem);
   --elements-width-4: min(100%, 50rem);
-  --rotation-duration: 400s;
+  --rotation-duration: 500s;
   --space-bg-translate: translate(-50%, -50%);
   position: relative;
 }
