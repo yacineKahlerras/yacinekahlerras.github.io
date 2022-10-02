@@ -552,6 +552,7 @@ hamburger animation
   justify-content: center;
 }
 .hero-image img {
+  width: 100%;
   animation: float 25s ease-in-out infinite;
 }
 
