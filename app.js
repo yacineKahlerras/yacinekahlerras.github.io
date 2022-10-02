@@ -85,6 +85,7 @@ const projectImgContainer = document.querySelector(
 );
 const sourceBtn = document.querySelector(".source-btn");
 const liveBtn = document.querySelector(".live-btn");
+const projectTitle = document.querySelector(".modal-project-title");
 const projectText = document.querySelector(".project-text");
 
 const projectsInfos = [
@@ -92,6 +93,7 @@ const projectsInfos = [
     img: "./images/projects/project-1.png",
     source: "https://github.com/yacineKahlerras/bookmark-landing-page",
     live: "https://yacinekahlerras.github.io/bookmark-landing-page/",
+    title: "bookmark landing page",
     description: `Suspendisse viverra, nunc sed convallis cursus, mi erat scelerisque
                   dui, id pretium orci mi porttitor ipsum. Maecenas in auctor ligula,
                   sit amet vulputate sapien. Morbi congue dignissim consequat. Nunc at
@@ -106,6 +108,7 @@ const projectsInfos = [
     img: "./images/projects/project-2.png",
     source: "https://github.com/yacineKahlerras/ip-address-tracker",
     live: "https://yacinekahlerras.github.io/ip-address-tracker/",
+    title: "ip address tracker",
     description: `Suspendisse viverra, nunc sed convallis cursus, mi erat scelerisque
                   dui, id pretium orci mi porttitor ipsum. Maecenas in auctor ligula,
                   sit amet vulputate sapien. Morbi congue dignissim consequat. Nunc at
@@ -120,6 +123,7 @@ const projectsInfos = [
     img: "./images/projects/project-3.png",
     source: "https://github.com/yacineKahlerras/url-shortening-api",
     live: "https://yacinekahlerras.github.io/url-shortening-api/",
+    title: "url shortener",
     description: `Suspendisse viverra, nunc sed convallis cursus, mi erat scelerisque
                   dui, id pretium orci mi porttitor ipsum. Maecenas in auctor ligula,
                   sit amet vulputate sapien. Morbi congue dignissim consequat. Nunc at
@@ -134,6 +138,7 @@ const projectsInfos = [
     img: "./images/projects/project-4.png",
     source: "https://github.com/yacineKahlerras/loopstudios-landing-page",
     live: "https://yacinekahlerras.github.io/loopstudios-landing-page/",
+    title: "loopstudios landing page",
     description: `Suspendisse viverra, nunc sed convallis cursus, mi erat scelerisque
                   dui, id pretium orci mi porttitor ipsum. Maecenas in auctor ligula,
                   sit amet vulputate sapien. Morbi congue dignissim consequat. Nunc at
@@ -164,6 +169,7 @@ const updateModalInfo = (index) => {
   projectImgContainer.firstElementChild.src = project.img;
   sourceBtn.href = project.source;
   liveBtn.href = project.live;
+  projectTitle.textContent = project.title;
   projectText.textContent = project.description;
 };
 

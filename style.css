@@ -1006,6 +1006,10 @@ modal text
 
 
 */
+.modal-center h3 {
+  font-size: clamp(3.2rem, 3.05vw, 4.4rem);
+  opacity: 50%;
+}
 .modal-center p {
   text-align: justify;
   text-transform: capitalize;
