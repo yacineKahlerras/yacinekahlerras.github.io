@@ -94,60 +94,36 @@ const projectsInfos = [
     source: "https://github.com/yacineKahlerras/bookmark-landing-page",
     live: "https://yacinekahlerras.github.io/bookmark-landing-page/",
     title: "bookmark landing page",
-    description: `Suspendisse viverra, nunc sed convallis cursus, mi erat scelerisque
-                  dui, id pretium orci mi porttitor ipsum. Maecenas in auctor ligula,
-                  sit amet vulputate sapien. Morbi congue dignissim consequat. Nunc at
-                  maximus nunc. <br />
-
-                  Nullam vehicula quis tellus nec tempor. Aliquam pretium, quam quis
-                  porttitor vulputate, orci nulla viverra massa, nec condimentum ante
-                  nulla sed ligula. Duis semper cursus semper. Vivamus dictum maximus
-                  turpis non accumsan.`,
+    description: `Landing page with sliding animations and uses the EmailJS api to send emails to my gmail 
+                  address, also a regex for email validation.`,
   },
   {
     img: "./images/projects/project-2.png",
     source: "https://github.com/yacineKahlerras/ip-address-tracker",
     live: "https://yacinekahlerras.github.io/ip-address-tracker/",
     title: "ip address tracker",
-    description: `Suspendisse viverra, nunc sed convallis cursus, mi erat scelerisque
-                  dui, id pretium orci mi porttitor ipsum. Maecenas in auctor ligula,
-                  sit amet vulputate sapien. Morbi congue dignissim consequat. Nunc at
-                  maximus nunc. <br />
-
-                  Nullam vehicula quis tellus nec tempor. Aliquam pretium, quam quis
-                  porttitor vulputate, orci nulla viverra massa, nec condimentum ante
-                  nulla sed ligula. Duis semper cursus semper. Vivamus dictum maximus
-                  turpis non accumsan.`,
+    description: `This one was a fun one to make it uses two different api's, the first gets your IP address and finds
+                  its location and sends back approximate coordinates of that location.
+                  
+                  The second one uses those coordinates to display the location on a map.
+                  You can click on the dice button to go random locations and explore them.`,
   },
   {
     img: "./images/projects/project-3.png",
     source: "https://github.com/yacineKahlerras/url-shortening-api",
     live: "https://yacinekahlerras.github.io/url-shortening-api/",
     title: "url shortener",
-    description: `Suspendisse viverra, nunc sed convallis cursus, mi erat scelerisque
-                  dui, id pretium orci mi porttitor ipsum. Maecenas in auctor ligula,
-                  sit amet vulputate sapien. Morbi congue dignissim consequat. Nunc at
-                  maximus nunc. <br />
-
-                  Nullam vehicula quis tellus nec tempor. Aliquam pretium, quam quis
-                  porttitor vulputate, orci nulla viverra massa, nec condimentum ante
-                  nulla sed ligula. Duis semper cursus semper. Vivamus dictum maximus
-                  turpis non accumsan.`,
+    description: `an app that shortens links using an api. when app sends the inputed link
+                  to the api and it sends back the shortened link that is displayed, 
+                  you can copy then the shortened link by pressing the copy button.`,
   },
   {
     img: "./images/projects/project-4.png",
     source: "https://github.com/yacineKahlerras/loopstudios-landing-page",
     live: "https://yacinekahlerras.github.io/loopstudios-landing-page/",
     title: "loopstudios landing page",
-    description: `Suspendisse viverra, nunc sed convallis cursus, mi erat scelerisque
-                  dui, id pretium orci mi porttitor ipsum. Maecenas in auctor ligula,
-                  sit amet vulputate sapien. Morbi congue dignissim consequat. Nunc at
-                  maximus nunc. <br />
-
-                  Nullam vehicula quis tellus nec tempor. Aliquam pretium, quam quis
-                  porttitor vulputate, orci nulla viverra massa, nec condimentum ante
-                  nulla sed ligula. Duis semper cursus semper. Vivamus dictum maximus
-                  turpis non accumsan.`,
+    description: `a simple landing page that is made using html, css and javascript for 
+                  accessibility.`,
   },
 ];
 
