@@ -76,7 +76,7 @@ navLinks.forEach((link, index) => {
  * ==========================
  * ==========================
  * */
-const projectList = [...document.querySelector(".projects-list").children];
+let projectList = [...document.querySelector(".projects-list").children];
 const projectModal = document.querySelector(".project-modal");
 const closeModalBtn = document.querySelector(".close-btn");
 
@@ -127,6 +127,34 @@ const projectsInfos = [
   },
 ];
 
+/** init projects list */
+const initProjectsList = () => {
+  const projectsListContainer = document.querySelector(".projects-list");
+  projectsListContainer.innerHTML = projectsInfos
+    .map((project, index) => {
+      return `
+      <!-- project ${index} -->
+      <li>
+              <div class="individual-project">
+                <img src="${project.img}" alt="${project.title}">
+              </div>
+            </li>
+      `;
+    })
+    .join("");
+
+  // adding listeners to the projects
+  projectList = [...document.querySelector(".projects-list").children];
+  /** listeners */
+  projectList.forEach((p, index) => {
+    p.addEventListener("click", () => {
+      modalVisibility(true, index);
+      doAnimation(index);
+    });
+  });
+};
+initProjectsList();
+
 /** hides/shows modal */
 const modalVisibility = (isVisible, index) => {
   if (isVisible) {
@@ -148,14 +176,6 @@ const updateModalInfo = (index) => {
   projectTitle.textContent = project.title;
   projectText.textContent = project.description;
 };
-
-/** listeners */
-projectList.forEach((p, index) => {
-  p.addEventListener("click", () => {
-    modalVisibility(true, index);
-    doAnimation(index);
-  });
-});
 
 closeModalBtn.addEventListener("click", () => {
   modalVisibility(false);
