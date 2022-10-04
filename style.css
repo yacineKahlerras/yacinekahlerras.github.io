@@ -245,7 +245,7 @@ slidedown
 
 
 
-rotation 
+rotation for bg
 
 
 
@@ -276,6 +276,44 @@ rotation
     -webkit-transform: var(--space-bg-translate) rotate(360deg);
     -o-transform: var(--space-bg-translate) rotate(360deg);
     transform: var(--space-bg-translate) rotate(360deg);
+  }
+}
+
+/* 
+
+
+
+rotation 
+
+
+
+*/
+@-webkit-keyframes rotation /* Safari and Chrome */ {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotation {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
@@ -695,6 +733,36 @@ elements hover
   -o-animation: rotating var(--rotation-duration) linear infinite;
   animation: rotating var(--rotation-duration) linear infinite;
 }
+.projects-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 
+
+loading animation 
+
+*/
+.loading-projects {
+  --loading-size: 7rem;
+  --loading-thickness: 0.8rem;
+  width: var(--loading-size);
+  height: var(--loading-size);
+  border: solid var(--loading-thickness) var(--blue-4);
+  border-bottom: solid var(--loading-thickness) var(--blue-3);
+  border-radius: 50%;
+  animation: rotation 1s infinite;
+}
+.hide-loading {
+  display: none;
+}
+
+/* 
+
+individual-project 
+
+*/
 .individual-project {
   width: 100%;
   border-radius: 1em;

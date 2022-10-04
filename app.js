@@ -79,6 +79,7 @@ navLinks.forEach((link, index) => {
 let projectList = [...document.querySelector(".projects-list").children];
 const projectModal = document.querySelector(".project-modal");
 const closeModalBtn = document.querySelector(".close-btn");
+const loadingAnimation = document.querySelector(".loading-projects");
 
 const projectImgContainer = document.querySelector(
   ".project-modal-img-container"
@@ -142,6 +143,9 @@ const initProjectsList = () => {
       `;
     })
     .join("");
+
+  // hides the loading animation
+  loadingAnimation.classList.add("hide-loading");
 
   // adding listeners to the projects
   projectList = [...document.querySelector(".projects-list").children];
