@@ -304,6 +304,6 @@ form.addEventListener("submit", (e) => {
 
   if (nameValid && emailValid) {
     showNotification();
-    // sendToMyEmail();
+    sendToMyEmail();
   }
 });
