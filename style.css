@@ -675,6 +675,12 @@ elements
 .tools-list li:nth-of-type(4)::after {
   content: "FIGMA";
 }
+.tools-list li:nth-of-type(5)::after {
+  content: "REACT";
+}
+.tools-list li:nth-of-type(6)::after {
+  content: "SASS";
+}
 
 /* 
 
@@ -697,7 +703,7 @@ elements hover
 
 @media (min-width: 48em) {
   .skills-center .tools-list {
-    grid-template-columns: repeat(4, 10rem);
+    grid-template-columns: repeat(3, 10rem);
     justify-content: center;
   }
 }
