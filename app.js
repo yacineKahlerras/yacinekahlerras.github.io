@@ -91,6 +91,24 @@ const projectText = document.querySelector(".project-text");
 
 const projectsInfos = [
   {
+    img: "./images/projects/quiz-app.jpg",
+    source: "https://github.com/yacineKahlerras/Quiz-React-App",
+    live: "https://yacinekahlerras.github.io/Quiz-React-App/",
+    title: "Quiz app",
+    description: `an app that shortens links using an api. when app sends the inputed link
+                  to the api and it sends back the shortened link that is displayed, 
+                  you can copy then the shortened link by pressing the copy button.`,
+  },
+  {
+    img: "./images/projects/todolist.jpg",
+    source: "https://github.com/yacineKahlerras/todolist/",
+    live: "https://yacinekahlerras.github.io/todolist/",
+    title: "Todo list",
+    description: `an app that shortens links using an api. when app sends the inputed link
+                  to the api and it sends back the shortened link that is displayed, 
+                  you can copy then the shortened link by pressing the copy button.`,
+  },
+  {
     img: "./images/projects/project-3.png",
     source: "https://github.com/yacineKahlerras/url-shortening-api",
     live: "https://yacinekahlerras.github.io/url-shortening-api/",
