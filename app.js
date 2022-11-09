@@ -95,18 +95,18 @@ const projectsInfos = [
     source: "https://github.com/yacineKahlerras/Quiz-React-App",
     live: "https://yacinekahlerras.github.io/Quiz-React-App/",
     title: "Quiz app",
-    description: `an app that shortens links using an api. when app sends the inputed link
-                  to the api and it sends back the shortened link that is displayed, 
-                  you can copy then the shortened link by pressing the copy button.`,
+    description: `this is a react app that fetches data from Open Triva API and displays the questions 
+                  and multiple answers and after submitting your answers you get the score and right 
+                  and wrong answers in green and red accordingly.`,
   },
   {
     img: "./images/projects/todolist.jpg",
     source: "https://github.com/yacineKahlerras/todolist/",
     live: "https://yacinekahlerras.github.io/todolist/",
     title: "Todo list",
-    description: `an app that shortens links using an api. when app sends the inputed link
-                  to the api and it sends back the shortened link that is displayed, 
-                  you can copy then the shortened link by pressing the copy button.`,
+    description: `this is a todo list that i made using react and sass, added a dark/light theme by 
+                  switching attributes that override css variables, dragging options, and useContext 
+                  for accessing all the data of app.`,
   },
   {
     img: "./images/projects/project-3.png",
