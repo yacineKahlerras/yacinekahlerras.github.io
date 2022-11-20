@@ -91,22 +91,17 @@ const projectText = document.querySelector(".project-text");
 
 const projectsInfos = [
   {
-    img: "./images/projects/quiz-app.jpg",
-    source: "https://github.com/yacineKahlerras/Quiz-React-App",
-    live: "https://yacinekahlerras.github.io/Quiz-React-App/",
-    title: "Quiz app",
-    description: `this is a react app that fetches data from Open Triva API and displays the questions 
-                  and multiple answers and after submitting your answers you get the score and right 
-                  and wrong answers in green and red accordingly.`,
-  },
-  {
-    img: "./images/projects/todolist.jpg",
-    source: "https://github.com/yacineKahlerras/todolist/",
-    live: "https://yacinekahlerras.github.io/todolist/",
-    title: "Todo list",
-    description: `this is a todo list that i made using react and sass, added a dark/light theme by 
-                  switching attributes that override css variables, dragging options, and useContext 
-                  for accessing all the data of app.`,
+    img: "./images/projects/manage-landing-page.jpg",
+    source: "https://github.com/yacineKahlerras/manage-landing-page",
+    live: "https://yacinekahlerras.github.io/manage-landing-page/",
+    title: "Manage Landing Page",
+    description: `this is a project that i made using the designs of frontend challenges 
+                  it is a multiple page site in which i used React-Router (the routing is 
+                    done using HashRouter and not the BrowserRouter because there is no backend 
+                    server to solve the sub-url bug). i used SwiperJS for the sliders and ToastifyJS 
+                    for the notifications, i also used SASS/SCSS for the styling of the page. 
+                    there's also an email validation where an error notification will show 
+                    if the field is empty or has an invalid format.`,
   },
   {
     img: "./images/projects/project-3.png",
@@ -137,12 +132,22 @@ const projectsInfos = [
                   address, also a regex for email validation.`,
   },
   {
-    img: "./images/projects/project-4.png",
-    source: "https://github.com/yacineKahlerras/loopstudios-landing-page",
-    live: "https://yacinekahlerras.github.io/loopstudios-landing-page/",
-    title: "loopstudios landing page",
-    description: `a simple landing page that is made using html, css and javascript for 
-                  accessibility.`,
+    img: "./images/projects/quiz-app.jpg",
+    source: "https://github.com/yacineKahlerras/Quiz-React-App",
+    live: "https://yacinekahlerras.github.io/Quiz-React-App/",
+    title: "Quiz app",
+    description: `this is a react app that fetches data from Open Triva API and displays the questions 
+                  and multiple answers and after submitting your answers you get the score and right 
+                  and wrong answers in green and red accordingly.`,
+  },
+  {
+    img: "./images/projects/todolist.jpg",
+    source: "https://github.com/yacineKahlerras/todolist/",
+    live: "https://yacinekahlerras.github.io/todolist/",
+    title: "Todo list",
+    description: `this is a todo list that i made using react and sass, added a dark/light theme by 
+                  switching attributes that override css variables, dragging options, and useContext 
+                  for accessing all the data of app.`,
   },
 ];
 
