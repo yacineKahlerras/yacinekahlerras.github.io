@@ -681,6 +681,9 @@ elements
 .tools-list li:nth-of-type(6)::after {
   content: "SASS";
 }
+.tools-list li img {
+  max-width: 10rem;
+}
 
 /* 
 
