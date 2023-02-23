@@ -92,35 +92,34 @@ const projectText = document.querySelector(".project-text");
 const projectsInfos = [
   {
     img: "./images/projects/entertainement-app.png",
-    source: "https://github.com/yacineKahlerras/manage-landing-page",
-    live: "https://yacinekahlerras.github.io/manage-landing-page/",
-    title: "Manage Landing Page",
-    description: `this is a project that i made using the designs of frontend challenges 
-                  it is a multiple page site in which i used React-Router (the routing is 
-                    done using HashRouter and not the BrowserRouter because there is no backend 
-                    server to solve the sub-url bug). i used SwiperJS for the sliders and ToastifyJS 
-                    for the notifications, i also used SASS/SCSS for the styling of the page. 
-                    there's also an email validation where an error notification will show 
-                    if the field is empty or has an invalid format.`,
+    source: "https://github.com/yacineKahlerras/entertainement-app",
+    live: "https://yacinekahlerras.github.io/entertainement-app/",
+    title: "Entertainement App",
+    description: `using the TMDB API to get the list of different movies and shows, the app organize them into 
+    different category sections where you can hit "see more" to go to the category page where you can select 
+    the movie/show category that you like and also search for the movie/show that you want to find. also in 
+    the navigation there is a movies only and tv shows only page.`,
   },
   {
     img: "./images/projects/rest-countries.jpg",
-    source: "https://github.com/yacineKahlerras/ip-address-tracker",
-    live: "https://yacinekahlerras.github.io/ip-address-tracker/",
-    title: "ip address tracker",
-    description: `This one was a fun one to make it uses two different api's, the first gets your IP address and finds
-                  its location and sends back approximate coordinates of that location.
-                  
-                  The second one uses those coordinates to display the location on a map.
-                  You can click on the dice button to go random locations and explore them.`,
+    source: "https://github.com/yacineKahlerras/rest-countries-app",
+    live: "https://yacinekahlerras.github.io/rest-countries-app/",
+    title: "Rest Countries",
+    description: `using the Rest Countries API to get list of all the 250 countries and islands and all the 
+    necessary information about them , the app displays the country components so you can filter through 
+    them by continent and by searching the name of the country, also you can go to the country's page to 
+    get additional information on it like location and its neighbouring countries...ect`,
   },
   {
     img: "./images/projects/cinecom.png",
-    source: "https://github.com/yacineKahlerras/bookmark-landing-page",
-    live: "https://yacinekahlerras.github.io/bookmark-landing-page/",
-    title: "bookmark landing page",
-    description: `Landing page with sliding animations and uses the EmailJS api to send emails to my gmail 
-                  address, also a regex for email validation.`,
+    source: "https://github.com/yacineKahlerras/cinema-ticket-booking-app",
+    live: "https://yacinekahlerras.github.io/cinema-ticket-booking-app/",
+    title: "Cinecom Ticketing",
+    description: `this is a cinema ticket booking prototype that i made for a client, he wanted to test out a 
+    few ideas and see how they look as an interactable app, the app gets the available movies lists from the 
+    firestore database and then displays them as items links, each link takes you to a movie info page that 
+    uses TMDB API to get the movie infos, you can then reserve the seatings and register and "pay" for the 
+    ticket, and finally download the tickets which contain the address and the movie QR code`,
   },
   {
     img: "./images/projects/project-3.png",
