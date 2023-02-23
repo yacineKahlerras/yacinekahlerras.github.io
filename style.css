@@ -673,10 +673,10 @@ elements
   content: "JAVASCRIPT";
 }
 .tools-list li:nth-of-type(4)::after {
-  content: "FIGMA";
+  content: "REACT";
 }
 .tools-list li:nth-of-type(5)::after {
-  content: "REACT";
+  content: "TAILWIND";
 }
 .tools-list li:nth-of-type(6)::after {
   content: "SASS";
