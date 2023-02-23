@@ -91,7 +91,7 @@ const projectText = document.querySelector(".project-text");
 
 const projectsInfos = [
   {
-    img: "./images/projects/manage-landing-page.jpg",
+    img: "./images/projects/entertainement-app.png",
     source: "https://github.com/yacineKahlerras/manage-landing-page",
     live: "https://yacinekahlerras.github.io/manage-landing-page/",
     title: "Manage Landing Page",
@@ -104,16 +104,7 @@ const projectsInfos = [
                     if the field is empty or has an invalid format.`,
   },
   {
-    img: "./images/projects/project-3.png",
-    source: "https://github.com/yacineKahlerras/url-shortening-api",
-    live: "https://yacinekahlerras.github.io/url-shortening-api/",
-    title: "url shortener",
-    description: `an app that shortens links using an api. when app sends the inputed link
-                  to the api and it sends back the shortened link that is displayed, 
-                  you can copy then the shortened link by pressing the copy button.`,
-  },
-  {
-    img: "./images/projects/project-2.png",
+    img: "./images/projects/rest-countries.jpg",
     source: "https://github.com/yacineKahlerras/ip-address-tracker",
     live: "https://yacinekahlerras.github.io/ip-address-tracker/",
     title: "ip address tracker",
@@ -124,12 +115,21 @@ const projectsInfos = [
                   You can click on the dice button to go random locations and explore them.`,
   },
   {
-    img: "./images/projects/project-1.png",
+    img: "./images/projects/cinecom.png",
     source: "https://github.com/yacineKahlerras/bookmark-landing-page",
     live: "https://yacinekahlerras.github.io/bookmark-landing-page/",
     title: "bookmark landing page",
     description: `Landing page with sliding animations and uses the EmailJS api to send emails to my gmail 
                   address, also a regex for email validation.`,
+  },
+  {
+    img: "./images/projects/project-3.png",
+    source: "https://github.com/yacineKahlerras/url-shortening-api",
+    live: "https://yacinekahlerras.github.io/url-shortening-api/",
+    title: "url shortener",
+    description: `an app that shortens links using an api. when app sends the inputed link
+                  to the api and it sends back the shortened link that is displayed, 
+                  you can copy then the shortened link by pressing the copy button.`,
   },
 ];
 
