@@ -101,16 +101,6 @@ const projectsInfos = [
     the navigation there is a movies only and tv shows only page.`,
   },
   {
-    img: "./images/projects/rest-countries.jpg",
-    source: "https://github.com/yacineKahlerras/rest-countries-app",
-    live: "https://yacinekahlerras.github.io/rest-countries-app/",
-    title: "Rest Countries",
-    description: `using the Rest Countries API to get list of all the 250 countries and islands and all the 
-    necessary information about them , the app displays the country components so you can filter through 
-    them by continent and by searching the name of the country, also you can go to the country's page to 
-    get additional information on it like location and its neighbouring countries...ect`,
-  },
-  {
     img: "./images/projects/cinecom.png",
     source: "https://github.com/yacineKahlerras/cinema-ticket-booking-app",
     live: "https://yacinekahlerras.github.io/cinema-ticket-booking-app/",
@@ -121,6 +111,17 @@ const projectsInfos = [
     uses TMDB API to get the movie infos, you can then reserve the seatings and register and "pay" for the 
     ticket, and finally download the tickets which contain the address and the movie QR code`,
   },
+  {
+    img: "./images/projects/rest-countries.jpg",
+    source: "https://github.com/yacineKahlerras/rest-countries-app",
+    live: "https://yacinekahlerras.github.io/rest-countries-app/",
+    title: "Rest Countries",
+    description: `using the Rest Countries API to get list of all the 250 countries and islands and all the 
+    necessary information about them , the app displays the country components so you can filter through 
+    them by continent and by searching the name of the country, also you can go to the country's page to 
+    get additional information on it like location and its neighbouring countries...ect`,
+  },
+
   {
     img: "./images/projects/project-3.png",
     source: "https://github.com/yacineKahlerras/url-shortening-api",
