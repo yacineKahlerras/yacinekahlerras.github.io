@@ -828,6 +828,9 @@ individual-project
 .about-center p {
   text-align: justify;
 }
+.about-center p:not(:last-of-type) {
+  margin-bottom: 1.5rem;
+}
 
 /* 
 =====================
