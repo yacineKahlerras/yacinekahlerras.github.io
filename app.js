@@ -93,7 +93,7 @@ const projectsInfos = [
   {
     img: "./images/projects/entertainement-app.png",
     source: "https://github.com/yacineKahlerras/entertainement-app",
-    live: "https://yacinekahlerras.github.io/entertainement-app/",
+    live: "https://entertainement-app.vercel.app/",
     title: "Entertainement App",
     description: `using the TMDB API to get the list of different movies and shows, the app organize them into 
     different category sections where you can hit "see more" to go to the category page where you can select 
@@ -114,7 +114,7 @@ const projectsInfos = [
   {
     img: "./images/projects/rest-countries.jpg",
     source: "https://github.com/yacineKahlerras/rest-countries-app",
-    live: "https://yacinekahlerras.github.io/rest-countries-app/",
+    live: "https://rest-countries-app-alpha.vercel.app/",
     title: "Rest Countries",
     description: `using the Rest Countries API to get list of all the 250 countries and islands and all the 
     necessary information about them , the app displays the country components so you can filter through 

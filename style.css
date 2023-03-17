@@ -665,25 +665,26 @@ elements
   transition: var(--transition-1);
 }
 .tools-list li:nth-of-type(1)::after {
-  content: "HTML";
-}
-.tools-list li:nth-of-type(2)::after {
-  content: "CSS";
-}
-.tools-list li:nth-of-type(3)::after {
-  content: "JAVASCRIPT";
-}
-.tools-list li:nth-of-type(4)::after {
   content: "REACT";
 }
-.tools-list li:nth-of-type(5)::after {
+.tools-list li:nth-of-type(2)::after {
+  content: "NEXT";
+}
+.tools-list li:nth-of-type(3)::after {
+  content: "FIREBASE";
+}
+.tools-list li:nth-of-type(4)::after {
   content: "TAILWIND";
 }
-.tools-list li:nth-of-type(6)::after {
+.tools-list li:nth-of-type(5)::after {
   content: "SASS";
+}
+.tools-list li:nth-of-type(6)::after {
+  content: "FIGMA";
 }
 .tools-list li img {
   max-width: 10rem;
+  max-height: 10rem;
 }
 
 /* 
