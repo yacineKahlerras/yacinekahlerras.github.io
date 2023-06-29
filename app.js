@@ -91,6 +91,16 @@ const projectText = document.querySelector(".project-text");
 
 const projectsInfos = [
   {
+    img: "./images/projects/yazona-ecommerce.png",
+    source: "https://github.com/yacineKahlerras/yazona-ecommerce",
+    live: "https://yazona.vercel.app/",
+    title: "Yazona ecommerce",
+    description: `This is an e-commerce website equipped with search filters and admin functionality. 
+    It is developed using MongoDB and Tailwind CSS. The website provides features such as user login, 
+    purchasing clothing items, and displaying product information. Furthermore, it incorporates 
+    MongoDB and NextAuth for seamless authentication and data storage capabilities.`,
+  },
+  {
     img: "./images/projects/entertainement-app.png",
     source: "https://github.com/yacineKahlerras/entertainement-app",
     live: "https://entertainement-app.vercel.app/",
@@ -120,16 +130,6 @@ const projectsInfos = [
     necessary information about them , the app displays the country components so you can filter through 
     them by continent and by searching the name of the country, also you can go to the country's page to 
     get additional information on it like location and its neighbouring countries...ect`,
-  },
-
-  {
-    img: "./images/projects/project-3.png",
-    source: "https://github.com/yacineKahlerras/url-shortening-api",
-    live: "https://yacinekahlerras.github.io/url-shortening-api/",
-    title: "url shortener",
-    description: `an app that shortens links using an api. when app sends the inputed link
-                  to the api and it sends back the shortened link that is displayed, 
-                  you can copy then the shortened link by pressing the copy button.`,
   },
 ];
 
