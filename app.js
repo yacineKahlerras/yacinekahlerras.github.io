@@ -72,6 +72,61 @@ navLinks.forEach((link, index) => {
 /**
  * ==========================
  * ==========================
+ *       skills section
+ * ==========================
+ * ==========================
+ * */
+const skillsElmList = document.getElementById("tools-list");
+const skillsList = [
+  {
+    name: "react",
+    img: "react-icon.svg",
+  },
+  {
+    name: "nextjs",
+    img: "nexJs.webp",
+  },
+  {
+    name: "firebase",
+    img: "firebase.svg",
+  },
+  {
+    name: "tailwind",
+    img: "tailwind.svg",
+  },
+  {
+    name: "sass",
+    img: "sass-icon.svg",
+  },
+  {
+    name: "figma",
+    img: "figma.svg",
+  },
+  {
+    name: "expressjs",
+    img: "expressjs.svg",
+  },
+  {
+    name: "mongodb",
+    img: "mongo.svg",
+  },
+  {
+    name: "nodejs",
+    img: "node.svg",
+  },
+];
+skillsElmList.innerHTML = skillsList
+  .map((skill) => {
+    return `
+        <li id="${skill.name}">
+          <img src="./images/skills/${skill.img}" alt="${skill.name}" />
+        </li>`;
+  })
+  .join("");
+
+/**
+ * ==========================
+ * ==========================
  *        project modals
  * ==========================
  * ==========================
@@ -312,58 +367,3 @@ form.addEventListener("submit", (e) => {
     sendToMyEmail();
   }
 });
-
-/**
- * ==========================
- * ==========================
- *       skills section
- * ==========================
- * ==========================
- * */
-const skillsElmList = document.getElementById("tools-list");
-const skillsList = [
-  {
-    name: "react",
-    img: "react-icon.svg",
-  },
-  {
-    name: "nextjs",
-    img: "nexJs.webp",
-  },
-  {
-    name: "firebase",
-    img: "firebase.svg",
-  },
-  {
-    name: "tailwind",
-    img: "tailwind.svg",
-  },
-  {
-    name: "sass",
-    img: "sass-icon.svg",
-  },
-  {
-    name: "figma",
-    img: "figma.svg",
-  },
-  {
-    name: "expressjs",
-    img: "expressjs.svg",
-  },
-  {
-    name: "mongodb",
-    img: "mongo.svg",
-  },
-  {
-    name: "nodejs",
-    img: "node.svg",
-  },
-];
-skillsElmList.innerHTML = skillsList
-  .map((skill) => {
-    return `
-        <li id="${skill.name}">
-          <img src="./images/skills/${skill.img}" alt="${skill.name}" />
-        </li>`;
-  })
-  .join("");
