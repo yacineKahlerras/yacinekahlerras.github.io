@@ -162,10 +162,8 @@ const projectsInfos = [
     source: "https://github.com/yacineKahlerras/entertainement-app",
     live: "https://entertainement-app.vercel.app/",
     title: "Entertainement App",
-    description: `using the TMDB API to get the list of different movies and shows, the app organize them into 
-    different category sections where you can hit "see more" to go to the category page where you can select 
-    the movie/show category that you like and also search for the movie/show that you want to find. also in 
-    the navigation there is a movies only and tv shows only page.`,
+    description:
+      'Using the TMDB API, the app fetches a variety of movies and TV shows, organizing them into distinct category sections. Each section features a "See More" option that takes you to a dedicated category page, where you can browse and select your preferred movie or show category, or use the search function to quickly find specific titles. Additionally, the navigation menu includes separate pages for movies and TV shows, allowing you to easily explore each type individually.',
   },
 ];
 
@@ -217,6 +215,7 @@ const updateModalInfo = (index) => {
   const project = projectsInfos[index];
   projectImgContainer.firstElementChild.src = project.img;
   sourceBtn.href = project.source;
+  sourceBtn.style.display = !project.source ? "none" : "block";
   liveBtn.href = project.live;
   projectTitle.textContent = project.title;
   projectText.textContent = project.description;
