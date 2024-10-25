@@ -136,32 +136,26 @@ const projectsInfos = [
   {
     img: "./images/projects/trending-content.png",
     source: null,
-    live: "https://trendingcontent.com/news",
+    live: "https://trendingcontent.com/",
     title: "Trending Content",
-    description: `using the Rest Countries API to get list of all the 250 countries and islands and all the 
-    necessary information about them , the app displays the country components so you can filter through 
-    them by continent and by searching the name of the country, also you can go to the country's page to 
-    get additional information on it like location and its neighbouring countries...ect`,
+    description:
+      "A dynamic news aggregator website that fetches the latest headlines from Google News, categorizes them, and allows users to customize their feed by region and article count. Integrated with Stripe for payment options and Firebase Authentication for secure user access.",
   },
   {
     img: "./images/projects/radiostation.png",
     source: null,
-    live: "https://trendingcontent.com/news",
-    title: "Trending Content",
-    description: `using the Rest Countries API to get list of all the 250 countries and islands and all the 
-    necessary information about them , the app displays the country components so you can filter through 
-    them by continent and by searching the name of the country, also you can go to the country's page to 
-    get additional information on it like location and its neighbouring countries...ect`,
+    live: "https://radiostation.ai/news",
+    title: "Radio Stations AI",
+    description:
+      "An AI-powered application built with Next.js and Tailwind CSS that generates text using GPT, converts it to speech, and compiles the audio into playlists. The playlists are then stored securely in Firebase for easy access and playback.",
   },
   {
     img: "./images/projects/aitop40.png",
     source: null,
-    live: "https://trendingcontent.com/news",
-    title: "Trending Content",
-    description: `using the Rest Countries API to get list of all the 250 countries and islands and all the 
-    necessary information about them , the app displays the country components so you can filter through 
-    them by continent and by searching the name of the country, also you can go to the country's page to 
-    get additional information on it like location and its neighbouring countries...ect`,
+    live: "https://aitop40.com/",
+    title: "AI Top 40",
+    description:
+      "An AI-driven radio station offering the latest music and news, featuring an AI-generated news anchor with text-to-speech technology. Enjoy a unique listening experience with up-to-date music and news, all powered by artificial intelligence.",
   },
   {
     img: "./images/projects/entertainement-app.png",

@@ -1089,12 +1089,14 @@ modal text
 
 */
 .modal-center h3 {
-  font-size: clamp(3.2rem, 3.05vw, 4.4rem);
+  font-size: clamp(1.8rem, 3.05vw, 4.4rem);
   opacity: 50%;
 }
 .modal-center p {
   text-align: justify;
   line-height: 2;
+  width: min(100%, 56rem);
+  text-align: justify;
 }
 
 /* 
