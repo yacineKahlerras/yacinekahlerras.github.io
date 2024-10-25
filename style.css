@@ -719,9 +719,15 @@ elements hover
   filter: saturate(50%);
 }
 
+@media (min-width: 30em) {
+  .skills-center .tools-list {
+    grid-template-columns: repeat(2, 10rem);
+    justify-content: center;
+  }
+}
 @media (min-width: 48em) {
   .skills-center .tools-list {
-    grid-template-columns: repeat(3, 10rem);
+    grid-template-columns: repeat(6, 10rem);
     justify-content: center;
   }
 }

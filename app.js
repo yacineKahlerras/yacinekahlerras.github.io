@@ -79,10 +79,6 @@ navLinks.forEach((link, index) => {
 const skillsElmList = document.getElementById("tools-list");
 const skillsList = [
   {
-    name: "react",
-    img: "react-icon.svg",
-  },
-  {
     name: "nextjs",
     img: "nexJs.webp",
   },
@@ -95,10 +91,6 @@ const skillsList = [
     img: "tailwind.svg",
   },
   {
-    name: "sass",
-    img: "sass-icon.svg",
-  },
-  {
     name: "figma",
     img: "figma.svg",
   },
@@ -109,10 +101,6 @@ const skillsList = [
   {
     name: "mongodb",
     img: "mongo.svg",
-  },
-  {
-    name: "nodejs",
-    img: "node.svg",
   },
 ];
 skillsElmList.innerHTML = skillsList
