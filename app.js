@@ -134,14 +134,34 @@ const projectText = document.querySelector(".project-text");
 
 const projectsInfos = [
   {
-    img: "./images/projects/yazona-ecommerce.png",
-    source: "https://github.com/yacineKahlerras/yazona-ecommerce",
-    live: "https://yazona.vercel.app/",
-    title: "Yazona ecommerce",
-    description: `This is an e-commerce website equipped with search filters and admin functionality. 
-    It is developed using Next.js, MongoDB and Tailwind CSS. The website provides features such as user login, 
-    purchasing clothing items, and displaying product information. Furthermore, it incorporates 
-    MongoDB and NextAuth for seamless authentication and data storage capabilities.`,
+    img: "./images/projects/trending-content.png",
+    source: null,
+    live: "https://trendingcontent.com/news",
+    title: "Trending Content",
+    description: `using the Rest Countries API to get list of all the 250 countries and islands and all the 
+    necessary information about them , the app displays the country components so you can filter through 
+    them by continent and by searching the name of the country, also you can go to the country's page to 
+    get additional information on it like location and its neighbouring countries...ect`,
+  },
+  {
+    img: "./images/projects/radiostation.png",
+    source: null,
+    live: "https://trendingcontent.com/news",
+    title: "Trending Content",
+    description: `using the Rest Countries API to get list of all the 250 countries and islands and all the 
+    necessary information about them , the app displays the country components so you can filter through 
+    them by continent and by searching the name of the country, also you can go to the country's page to 
+    get additional information on it like location and its neighbouring countries...ect`,
+  },
+  {
+    img: "./images/projects/aitop40.png",
+    source: null,
+    live: "https://trendingcontent.com/news",
+    title: "Trending Content",
+    description: `using the Rest Countries API to get list of all the 250 countries and islands and all the 
+    necessary information about them , the app displays the country components so you can filter through 
+    them by continent and by searching the name of the country, also you can go to the country's page to 
+    get additional information on it like location and its neighbouring countries...ect`,
   },
   {
     img: "./images/projects/entertainement-app.png",
@@ -152,27 +172,6 @@ const projectsInfos = [
     different category sections where you can hit "see more" to go to the category page where you can select 
     the movie/show category that you like and also search for the movie/show that you want to find. also in 
     the navigation there is a movies only and tv shows only page.`,
-  },
-  {
-    img: "./images/projects/cinecom.png",
-    source: "https://github.com/yacineKahlerras/cinema-ticket-booking-app",
-    live: "https://yacinekahlerras.github.io/cinema-ticket-booking-app/",
-    title: "Cinecom Ticketing",
-    description: `this is a cinema ticket booking prototype that i made for a client, he wanted to test out a 
-    few ideas and see how they look as an interactable app, the app gets the available movies lists from the 
-    firestore database and then displays them as items links, each link takes you to a movie info page that 
-    uses TMDB API to get the movie infos, you can then reserve the seatings and register and "pay" for the 
-    ticket, and finally download the tickets which contain the address and the movie QR code`,
-  },
-  {
-    img: "./images/projects/rest-countries.jpg",
-    source: "https://github.com/yacineKahlerras/rest-countries-app",
-    live: "https://rest-countries-app-alpha.vercel.app/",
-    title: "Rest Countries",
-    description: `using the Rest Countries API to get list of all the 250 countries and islands and all the 
-    necessary information about them , the app displays the country components so you can filter through 
-    them by continent and by searching the name of the country, also you can go to the country's page to 
-    get additional information on it like location and its neighbouring countries...ect`,
   },
 ];
 
