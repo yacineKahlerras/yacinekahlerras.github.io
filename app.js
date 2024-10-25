@@ -276,94 +276,32 @@ doAnimation(0);
  * ==========================
  * ==========================
  * */
-const form = document.querySelector(".form");
-const nameErrorMsg = document.querySelector(".name-error-msg");
-const emailErrorMsg = document.querySelector(".email-error-msg");
-
-const NAME_NEEDED_ERROR = "dont forget to give your name !";
-const EMAIL_NEEDED_ERROR = "email is needed for contacting !";
-const EMAIL_FORMAT_ERROR = "Whoops, wrong email format";
-
-const notification = document.querySelector(".note");
-
-emailjs.init("_2e0ipBCFq4DOUHiE");
-
-/** checks if field has a value */
-const hasValue = (input, FIELD_NEEDED_ERROR) => {
-  const inputValue = input.value.trim();
-  if (inputValue == "") {
-    return showError(input, FIELD_NEEDED_ERROR);
-  }
-  return showSuccess(input);
-};
-
-/** shows a message or effect */
-const showMessage = (input, message, type) => {
-  const errorMessage = input.nextElementSibling;
-  errorMessage.textContent = message;
-
-  input.classList = type ? "input-success" : "input-error";
-  return type;
-};
-
-/** shows success effect */
-const showSuccess = (input) => {
-  return showMessage(input, "", true);
-};
-
-/** shows error effect */
-const showError = (input, errorMsg) => {
-  return showMessage(input, errorMsg, false);
-};
-
-/** checks email value and its format */
-const validateEmail = (input, EMAIL_NEEDED_ERROR, EMAIL_FORMAT_ERROR) => {
-  if (!hasValue(input, EMAIL_NEEDED_ERROR)) return false;
-
-  const emailRegex =
-    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  const emailInputValue = input.value.trim();
-  if (!emailRegex.test(emailInputValue)) {
-    return showError(input, EMAIL_FORMAT_ERROR);
-  }
-  return true;
-};
-
-/** sends an email using emailJS */
-const sendToMyEmail = () => {
-  const name = form.elements["name"].value.trim();
-  const email = form.elements["email"].value.trim();
-  const message = form.elements["message"].value.trim();
-
-  emailjs.send("service_8fjnxfi", "template_xgm7lnu", {
-    name_id: name,
-    email_id: email,
-    message: message,
-  });
-};
-
-/** shows notification */
-const showNotification = () => {
-  notification.classList.add("note-active");
-
-  setTimeout(() => {
-    notification.classList.remove("note-active");
-  }, 3000);
-};
-
-/** when submitting */
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const nameValid = hasValue(form.elements["name"], NAME_NEEDED_ERROR);
-
-  const emailValid = validateEmail(
-    form.elements["email"],
-    EMAIL_NEEDED_ERROR,
-    EMAIL_FORMAT_ERROR
-  );
-
-  if (nameValid && emailValid) {
-    showNotification();
-    sendToMyEmail();
-  }
-});
+const contactElmsList = document.querySelector(".contact-links");
+const contactLinksData = [
+  {
+    name: "Linkedin",
+    img: "linkedin.svg",
+    link: "https://www.linkedin.com/in/yacine-kahlerras-30248a1b2",
+  },
+  {
+    name: "Upwork",
+    img: "upwork.svg",
+    link: "https://www.upwork.com/freelancers/yacinek8?mp_source=share",
+  },
+  {
+    name: "Gmail",
+    img: "gmail.svg",
+    link: "mailto:kahlerasse@gmail.com",
+  },
+];
+contactElmsList.innerHTML = contactLinksData
+  .map(({ name, img, link }) => {
+    return `
+        <li>
+          <a class="contact-item" target="_blank" href="${link}">
+            <img src="./images/contact/${img}" alt="${name}" />
+            <span>${name}</span>
+          </a>
+        </li>`;
+  })
+  .join("");

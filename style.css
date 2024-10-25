@@ -571,6 +571,9 @@ hamburger animation
 .hero-text {
   margin-bottom: 2.5rem;
 }
+.hero-text h1 {
+  text-transform: capitalize;
+}
 .hero-text h2 {
   padding-bottom: 1.5rem;
   margin-bottom: 1.5rem;
@@ -854,6 +857,7 @@ individual-project
   isolation: isolate;
   position: relative;
   overflow: hidden;
+  padding-bottom: 10rem;
 }
 .contact::before {
   content: "";
@@ -878,55 +882,35 @@ individual-project
 .contact-center {
   width: var(--elements-width-2);
 }
-
-/* 
-
-
-form 
-
-
-*/
-form > div {
-  width: 100%;
-  text-align: left;
-  margin-bottom: 1rem;
+.contact-links {
+  display: grid;
+  grid-template-columns: auto;
+  align-items: center;
+  place-items: center;
+  justify-content: center;
+  gap: 2rem;
 }
-small {
-  color: var(--red);
-  transition: var(--transition-1);
+.contact-links li {
+  width: min(100%, 8rem);
+  transition: all 0.2s ease-in-out;
 }
-
-/* 
-
-
-input 
-
-
-*/
-input,
-textarea {
-  width: 100%;
-  background: var(--blue-2);
-  border: none;
-  margin-bottom: 0rem;
-  padding: 0.5em 1em;
+.contact-links li:hover {
+  scale: 1.1;
+}
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
   font-size: 1.6rem;
-  color: var(--white);
-  border-radius: 0.3em;
-  resize: none;
-  transition: var(--transition-1);
 }
-input::placeholder,
-textarea::placeholder {
-  color: var(--light-white);
+.contact-links li a img {
+  width: 100%;
 }
-input:focus,
-textarea:focus {
-  box-shadow: 0 0 0 0.2rem var(--orange);
-  outline: none;
-}
-.input-error {
-  box-shadow: 0 0 0 0.2rem var(--red);
+@media (min-width: 48em) {
+  .contact-links {
+    grid-template-columns: repeat(3, 10rem);
+  }
 }
 
 /* 
