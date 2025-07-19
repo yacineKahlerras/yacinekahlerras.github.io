@@ -20,13 +20,10 @@ jobs:
           cache: "npm"
 
       - name: Install dependencies
-        run: |
-          cd next-app
-          npm ci
+        run: npm ci
 
       - name: Build and export site
         run: |
-          cd next-app
           npm run build
           touch out/.nojekyll
 
@@ -34,5 +31,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: master
-          folder: next-app/out
+          folder: out
           clean: true
