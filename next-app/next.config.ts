@@ -1,6 +1,11 @@
-module.exports = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   output: "export",
-  basePath: "",
-  assetPrefix: "",
   trailingSlash: true,
+  distDir: "out",
+  generateEtags: "/",
+  assetPrefix: "/",
+  basePath: "",
 };
+
+module.exports = nextConfig;
