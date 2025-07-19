@@ -16,7 +16,7 @@ jobs:
       - name: 📦 Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 20
+          node-version: "20.x"
 
       - name: 📥 Install dependencies
         run: |
@@ -25,6 +25,7 @@ jobs:
 
       - name: 🏗 Build and export site
         run: |
+          cd next-app
           npm run build
           touch out/.nojekyll
 
