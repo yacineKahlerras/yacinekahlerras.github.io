@@ -2,10 +2,6 @@
 const nextConfig = {
   output: "export",
   trailingSlash: true,
-  distDir: "out",
-  generateEtags: "/",
-  assetPrefix: "/",
-  basePath: "",
 };
 
 module.exports = nextConfig;
