@@ -5,8 +5,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
-    "export": "next export",
-    "deploy": "cd out && git init && git remote add origin https://github.com/yacineKahlerras/yacinekahlerras.github.io.git && git checkout -b master && git add . && git commit -m \"final deploy\" && git push -f origin master",
+    "deploy": "next build && cd out && git init && git remote add origin https://github.com/yacineKahlerras/yacinekahlerras.github.io.git && git checkout -b master && git add . && git commit -m \"final deploy\" && git push -f origin master",
     "start": "next start",
     "lint": "next lint"
   },
