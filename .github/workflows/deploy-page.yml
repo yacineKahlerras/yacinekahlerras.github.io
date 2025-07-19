@@ -1,0 +1,34 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v3
+
+      - name: 📦 Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: 📥 Install dependencies
+        run: npm install
+
+      - name: 🏗 Build and export site
+        run: |
+          npm run build
+          touch out/.nojekyll
+
+      - name: 🚀 Deploy to master branch
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: master
+          folder: out
+          clean: true
