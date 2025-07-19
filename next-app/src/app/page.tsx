@@ -170,7 +170,7 @@ export default function PortfolioApp() {
             <h3>Skills</h3>
             <ul className="tools-list">
               {skillsList.map((s) => (
-                <li key={s.name}>
+                <li key={s.name} id={s.name}>
                   <img src={`./images/skills/${s.img}`} alt={s.name} />
                 </li>
               ))}
@@ -199,11 +199,15 @@ export default function PortfolioApp() {
             <h3>About</h3>
             <p>
               My name is Yacine Kahlerras I’ve been into programming since my
-              early teens and have been working hard to sharpen my skills...
+              early teens and have been working hard to sharpen my skills. I’m
+              all about HTML, CSS, JavaScript, and the latest frameworks like
+              Next.js, Express.js, MongoDB, Firebase, and Tailwind.
             </p>
             <p>
               I love making awesome, responsive websites that run smoothly and
-              look great on any browser...
+              look great on any browser. I keep up with the latest trends in web
+              dev and always look for ways to level up my workflow and tackle
+              new challenges.
             </p>
           </div>
         </section>
