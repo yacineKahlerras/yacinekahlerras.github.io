@@ -1,4 +1,5 @@
 "use client";
+import Navbar from "@/componnents/navbar";
 import { useEffect, useRef, useState } from "react";
 
 const skillsList = [
@@ -116,37 +117,10 @@ export default function PortfolioApp() {
 
   return (
     <div>
-      <nav>
-        <div className="nav-center">
-          <ul className="nav-links">
-            <li>
-              <a className="active-link">Home</a>
-            </li>
-            <li>
-              <a>Skills</a>
-            </li>
-            <li>
-              <a>Projects</a>
-            </li>
-            <li>
-              <a>About</a>
-            </li>
-            <li>
-              <a>Contact</a>
-            </li>
-          </ul>
-          <button className="hamburger">
-            <div id="nav-icon2" ref={navIconRef}>
-              {[...Array(6)].map((_, i) => (
-                <span key={i}></span>
-              ))}
-            </div>
-          </button>
-        </div>
-      </nav>
+      <Navbar />
 
       <main>
-        <section className="hero" ref={heroRef}>
+        <section id="hero" className="hero" ref={heroRef}>
           <div className="hero-center">
             <div className="hero-text">
               <h1>Hello</h1>
@@ -165,7 +139,7 @@ export default function PortfolioApp() {
           </div>
         </section>
 
-        <section className="skills" ref={skillsRef}>
+        <section id="skills" className="skills" ref={skillsRef}>
           <div className="skills-center">
             <h3>Skills</h3>
             <ul className="tools-list">
@@ -178,7 +152,7 @@ export default function PortfolioApp() {
           </div>
         </section>
 
-        <section className="projects" ref={projectsRef}>
+        <section id="projects" className="projects" ref={projectsRef}>
           <div className="projects-center">
             <h3>Projects</h3>
             <ul className="projects-list">
@@ -194,7 +168,7 @@ export default function PortfolioApp() {
           </div>
         </section>
 
-        <section className="about" ref={aboutRef}>
+        <section id="about" className="about" ref={aboutRef}>
           <div className="about-center">
             <h3>About</h3>
             <p>
@@ -212,7 +186,7 @@ export default function PortfolioApp() {
           </div>
         </section>
 
-        <section className="contact" ref={contactRef}>
+        <section id="contact" className="contact" ref={contactRef}>
           <div className="contact-center">
             <h3>Contact</h3>
             <ul className="contact-links">
@@ -233,18 +207,6 @@ export default function PortfolioApp() {
           </div>
         </section>
       </main>
-
-      <aside className="sidemenu" ref={sidemenuRef}>
-        <div className="sidemenu-center">
-          <ul className="sidemenu-links">
-            <li>Home</li>
-            <li>Skills</li>
-            <li>Projects</li>
-            <li>About</li>
-            <li>Contact</li>
-          </ul>
-        </div>
-      </aside>
 
       {activeModal !== null && (
         <aside
