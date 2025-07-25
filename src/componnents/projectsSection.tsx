@@ -3,7 +3,7 @@ import { useState } from "react";
 import ProjectModal from "./projectModal";
 
 export default function ProjectsSection() {
-  const [activeModal, setActiveModal] = useState<number | undefined>(undefined);
+  const [activeModal, setActiveModal] = useState<number | null>(null);
 
   return (
     <>
