@@ -9,7 +9,7 @@ export default function AboutSection() {
         <h3>About</h3>
         {isSocials ? (
           <p>
-            I work with startups to build stuff that actually works — products
+            I work with startups to build stuff that actually works products
             that look good, feel smooth, and actually get users to stick around.
             When I’m not deep in code, I’m usually messing with new tools or
             frameworks (half out of curiosity, half because FOMO is real). I’m
