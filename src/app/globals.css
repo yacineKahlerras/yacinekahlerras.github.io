@@ -667,32 +667,23 @@ elements
   padding: 1.5rem 1rem;
   transition: var(--transition-1);
 }
-#react::after {
-  content: "REACT.JS";
+#node::after {
+  content: "NODE.JS";
 }
-#nextjs::after {
+#next::after {
   content: "NEXT.JS";
 }
-#firebase::after {
-  content: "FIREBASE";
-}
-#tailwind::after {
-  content: "TAILWIND";
-}
-#sass::after {
-  content: "SCSS";
-}
-#figma::after {
-  content: "FIGMA";
-}
-#expressjs::after {
-  content: "EXPRESS.JS";
-}
-#mongodb::after {
+#mongo::after {
   content: "MONGODB";
 }
-#nodejs::after {
-  content: "NODE.JS";
+#python::after {
+  content: "PYTHON";
+}
+#postgres::after {
+  content: "POSTGRES";
+}
+#nest::after {
+  content: "NEST.JS";
 }
 .tools-list li img {
   width: 100%;

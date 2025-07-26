@@ -6,7 +6,7 @@ export default function HeaderSection() {
           <h1>Hello</h1>
           <h2>I’m Yacine Kahlerras</h2>
           <p>
-            front-end dev with a love for building cool, interactive web
+            full-stack dev with a love for building cool, interactive web
             experiences
           </p>
         </div>

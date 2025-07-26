@@ -1,8 +1,8 @@
 export const skillsList = [
-  { name: "nextjs", img: "nexJs.webp" },
-  { name: "firebase", img: "firebase.svg" },
-  { name: "tailwind", img: "tailwind.svg" },
-  { name: "figma", img: "figma.svg" },
-  { name: "expressjs", img: "expressjs.svg" },
-  { name: "mongodb", img: "mongo.svg" },
+  { name: "node", img: "node.svg" },
+  { name: "next", img: "nexjs.webp" },
+  { name: "mongo", img: "mongo.svg" },
+  { name: "python", img: "python.svg" },
+  { name: "postgres", img: "postgres.svg" },
+  { name: "nest", img: "nestjs.svg" },
 ];
