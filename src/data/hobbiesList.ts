@@ -1,8 +1,8 @@
 export const hobbiesList = [
-  { name: "nextjs", img: "nexJs.webp" },
-  { name: "firebase", img: "firebase.svg" },
-  { name: "tailwind", img: "tailwind.svg" },
-  { name: "figma", img: "figma.svg" },
-  { name: "expressjs", img: "expressjs.svg" },
-  { name: "mongodb", img: "mongo.svg" },
+  { name: "books", img: "hobbies/book.svg" },
+  { name: "cooking", img: "hobbies/cook.svg" },
+  { name: "chess", img: "hobbies/chess.svg" },
+  { name: "running", img: "hobbies/run.svg" },
+  { name: "gaming", img: "hobbies/game.svg" },
+  { name: "editing", img: "hobbies/edit.svg" },
 ];

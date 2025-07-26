@@ -14,7 +14,7 @@ export default function SkillsSection() {
         <ul className="tools-list">
           {list.map((s) => (
             <li key={s.name} id={s.name}>
-              <img src={`./images/skills/${s.img}`} alt={s.name} />
+              <img src={`./images/${s.img}`} alt={s.name} />
             </li>
           ))}
         </ul>

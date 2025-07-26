@@ -685,6 +685,26 @@ elements
 #nest::after {
   content: "NEST.JS";
 }
+
+/* hobbies */
+#books::after {
+  content: "Books";
+}
+#chess::after {
+  content: "Chess";
+}
+#running::after {
+  content: "Running";
+}
+#gaming::after {
+  content: "Games";
+}
+#editing::after {
+  content: "Editing";
+}
+#cooking::after {
+  content: "Cooking";
+}
 .tools-list li img {
   width: 100%;
   max-width: 10rem;
