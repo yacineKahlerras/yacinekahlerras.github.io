@@ -6,7 +6,7 @@ export const navLinksSocials = [
   },
   {
     name: "Hobbies",
-    id: "hobbies",
+    id: "skills",
     targetElementId: "hobbies",
   },
   {
