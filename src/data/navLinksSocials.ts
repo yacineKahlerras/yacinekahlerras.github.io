@@ -7,7 +7,7 @@ export const navLinksSocials = [
   {
     name: "Hobbies",
     id: "skills",
-    targetElementId: "hobbies",
+    targetElementId: "skills",
   },
   {
     name: "Projects",
