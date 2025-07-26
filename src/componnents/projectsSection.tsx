@@ -6,13 +6,14 @@ import { useIsSocialsContext } from "@/utils/isSocialsContext";
 export default function ProjectsSection() {
   const [activeModal, setActiveModal] = useState<number | null>(null);
   const isSocials = useIsSocialsContext();
-  const projectsList = isSocials ? projectsInfos.pro : projectsInfos.personal;
+  const title = isSocials ? "Side Projects" : "Projects";
+  const projectsList = isSocials ? projectsInfos.personal : projectsInfos.pro;
 
   return (
     <>
       <section id="projects" className="projects">
         <div className="projects-center">
-          <h3>Projects</h3>
+          <h3>{title}</h3>
           <ul className="projects-list">
             {projectsList.map((project, index) => (
               <li key={index} onClick={() => setActiveModal(index)}>

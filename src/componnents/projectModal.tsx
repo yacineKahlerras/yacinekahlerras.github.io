@@ -9,7 +9,7 @@ export default function ProjectModal({
   setActiveModal: React.Dispatch<React.SetStateAction<number | null>>;
 }) {
   const isSocials = useIsSocialsContext();
-  const projectsList = isSocials ? projectsInfos.pro : projectsInfos.personal;
+  const projectsList = isSocials ? projectsInfos.personal : projectsInfos.pro;
   return (
     <aside
       className={`project-modal ${activeModal !== null ? "show-modal" : ""}`}

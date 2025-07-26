@@ -754,6 +754,7 @@ elements hover
   isolation: isolate;
   position: relative;
   overflow: hidden;
+  padding-bottom: 10rem;
 }
 .projects::before {
   content: "";

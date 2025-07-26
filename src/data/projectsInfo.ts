@@ -36,11 +36,19 @@ export const projectsInfos = {
   personal: [
     {
       img: "./images/projects/entertainement-app.png",
-      source: "https://github.com/yacineKahlerras/entertainement-app",
+      source: null,
       live: "https://entertainement-app.vercel.app/",
-      title: "Entertainement App",
+      title: "What Should i Watch?",
       description:
         'Using the TMDB API, the app fetches a variety of movies and TV shows, organizing them into distinct category sections. Each section features a "See More" option that takes you to a dedicated category page, where you can browse and select your preferred movie or show category, or use the search function to quickly find specific titles. Additionally, the navigation menu includes separate pages for movies and TV shows, allowing you to easily explore each type individually.',
+    },
+    {
+      img: "./images/projects/advice-generator.png",
+      source: null,
+      live: "https://yacinekahlerras.github.io/advice-generator-app/",
+      title: "Give Me Advice",
+      description:
+        "give you life changing advice that you should never ever in your life follow.",
     },
   ],
 };
