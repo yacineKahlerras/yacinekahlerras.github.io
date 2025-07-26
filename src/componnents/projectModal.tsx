@@ -1,4 +1,5 @@
 import { projectsInfos } from "@/data/projectsInfo";
+import { useIsSocialsContext } from "@/utils/isSocialsContext";
 
 export default function ProjectModal({
   activeModal,
@@ -7,6 +8,8 @@ export default function ProjectModal({
   activeModal: number | null;
   setActiveModal: React.Dispatch<React.SetStateAction<number | null>>;
 }) {
+  const isSocials = useIsSocialsContext();
+  const projectsList = isSocials ? projectsInfos.pro : projectsInfos.personal;
   return (
     <aside
       className={`project-modal ${activeModal !== null ? "show-modal" : ""}`}
@@ -28,17 +31,17 @@ export default function ProjectModal({
           {activeModal !== null && (
             <img
               className="project-modal-img"
-              src={projectsInfos[activeModal].img}
+              src={projectsList[activeModal].img}
               alt="project screenshot"
             />
           )}
         </div>
 
         <div className="modal-btn-container">
-          {activeModal !== null && projectsInfos[activeModal].source && (
+          {activeModal !== null && projectsList[activeModal].source && (
             <a
               className="source-btn"
-              href={projectsInfos[activeModal].source}
+              href={projectsList[activeModal].source}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -59,7 +62,7 @@ export default function ProjectModal({
           {activeModal !== null && (
             <a
               className="live-btn"
-              href={projectsInfos[activeModal].live}
+              href={projectsList[activeModal].live}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -86,10 +89,10 @@ export default function ProjectModal({
         </div>
 
         <h3 className="modal-project-title">
-          {activeModal !== null && projectsInfos[activeModal].title}
+          {activeModal !== null && projectsList[activeModal].title}
         </h3>
         <p className="project-text">
-          {activeModal !== null && projectsInfos[activeModal].description}
+          {activeModal !== null && projectsList[activeModal].description}
         </p>
       </div>
     </aside>

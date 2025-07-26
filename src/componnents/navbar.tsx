@@ -1,42 +1,19 @@
+import { navLinks } from "@/data/navLinks";
+import { navLinksSocials } from "@/data/navLinksSocials";
+import { useIsSocialsContext } from "@/utils/isSocialsContext";
 import React, { useRef, useState } from "react";
-
-const navLinks = [
-  {
-    name: "Home",
-    id: "home",
-    targetElementId: "hero",
-  },
-  {
-    name: "Skills",
-    id: "skills",
-    targetElementId: "skills",
-  },
-  {
-    name: "Projects",
-    id: "projects",
-    targetElementId: "projects",
-  },
-  {
-    name: "About",
-    id: "about",
-    targetElementId: "about",
-  },
-  {
-    name: "Contact",
-    id: "contact",
-    targetElementId: "contact",
-  },
-];
 
 export default function Navbar() {
   const [activeNavLink, setActiveNavLink] = useState("home");
   const sidemenuRef = useRef<HTMLDivElement | null>(null);
   const navIconRef = useRef<HTMLDivElement | null>(null);
+  const isSocials = useIsSocialsContext();
+  const navList = isSocials ? navLinksSocials : navLinks;
 
   const handleNavClick = (index: number) => {
-    setActiveNavLink(navLinks[index].id);
+    setActiveNavLink(navList[index].id);
     const targetElement = document.getElementById(
-      navLinks[index].targetElementId
+      navList[index].targetElementId
     );
     targetElement?.scrollIntoView({
       behavior: "smooth",
@@ -53,7 +30,7 @@ export default function Navbar() {
       <nav>
         <div className="nav-center">
           <ul className="nav-links">
-            {navLinks.map((link, index) => (
+            {navList.map((link, index) => (
               <li key={link.id}>
                 <a
                   className={activeNavLink === link.id ? "active-link" : ""}
@@ -79,7 +56,7 @@ export default function Navbar() {
       <aside className="sidemenu" ref={sidemenuRef} onClick={toggleSidemenu}>
         <div className="sidemenu-center">
           <ul className="sidemenu-links">
-            {navLinks.map((link, index) => (
+            {navList.map((link, index) => (
               <li
                 key={link.id}
                 onClick={() => {

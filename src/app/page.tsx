@@ -10,7 +10,7 @@ import { useSearchParams } from "next/navigation";
 
 export default function PortfolioApp() {
   const searchParams = useSearchParams();
-  const isSocials = searchParams.get("sort");
+  const isSocials = searchParams.get("socials");
 
   return (
     <IsSocialsContext.Provider value={{ isSocials: isSocials !== null }}>

@@ -6,5 +6,5 @@ export const IsSocialsContext = createContext({
 
 export const useIsSocialsContext = () => {
   const { isSocials } = useContext(IsSocialsContext);
-  return isSocials != null;
+  return isSocials;
 };
