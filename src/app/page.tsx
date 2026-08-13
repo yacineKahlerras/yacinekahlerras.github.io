@@ -1,32 +1,28 @@
-"use client";
 import AboutSection from "@/componnents/aboutSection";
+import BackToTop from "@/componnents/backToTop";
 import ContactSection from "@/componnents/contactSection";
 import HeaderSection from "@/componnents/headerSection";
 import Navbar from "@/componnents/navbar";
 import ProjectsSection from "@/componnents/projectsSection";
 import SkillsSection from "@/componnents/skillsSection";
-import { IsSocialsContext } from "@/utils/isSocialsContext";
-import { useSearchParams } from "next/navigation";
+import WarpField from "@/componnents/warpField";
 
-export default function PortfolioApp() {
-  const searchParams = useSearchParams();
-  const isSocials = searchParams.get("socials");
-
+export default function Home() {
   return (
-    <IsSocialsContext.Provider value={{ isSocials: isSocials !== null }}>
-      <div>
+    <>
+      <WarpField />
+      <div className="tunnel-glow" aria-hidden="true" />
+      <div className="content" id="top">
         <Navbar />
-
-        <main>
-          <HeaderSection />
-          <SkillsSection />
+        <HeaderSection />
+        <div className="hull">
           <ProjectsSection />
+          <SkillsSection />
           <AboutSection />
           <ContactSection />
-        </main>
-
-        <div className="note">Thanks for contacting i'll respond soon !</div>
+        </div>
       </div>
-    </IsSocialsContext.Provider>
+      <BackToTop />
+    </>
   );
 }

@@ -1,22 +1,23 @@
 export default function HeaderSection() {
   return (
-    <section id="hero" className="hero">
-      <div className="hero-center">
-        <div className="hero-text">
-          <h1>Hello</h1>
-          <h2>I’m Yacine Kahlerras</h2>
-          <p>
-            full-stack dev with a love for building cool, interactive web
-            experiences
-          </p>
-        </div>
-        <div className="hero-image">
-          <img
-            src="./images/illustrations/astronaut-1.svg"
-            alt="character illustration"
-          />
+    <header className="hero wrap">
+      <div className="hero-in">
+        <h1>
+          Full-stack developer moving <span className="g">fast</span>
+        </h1>
+        <p className="lede">
+          I work with startups to build products that look good, feel smooth,
+          and actually get users to stick around.
+        </p>
+        <div className="cta">
+          <a className="btn p" href="#work">
+            See the work
+          </a>
+          <a className="btn" href="#contact">
+            Get in touch
+          </a>
         </div>
       </div>
-    </section>
+    </header>
   );
 }
