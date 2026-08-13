@@ -150,8 +150,9 @@ p {
 
 /* ---------- hero ---------- */
 .hero {
-  /* vh-based padding so the hero holds real presence on tall/wide screens */
-  padding: clamp(58px, 9vh, 120px) 0 clamp(74px, 12vh, 150px);
+  /* vh-based padding for presence; the 26px sides matter on phones, where
+     the shorthand's old `0` let the paragraph touch the screen edges */
+  padding: clamp(58px, 9vh, 120px) 26px clamp(74px, 12vh, 150px);
   position: relative;
   text-align: center;
 }
@@ -642,6 +643,10 @@ section {
 }
 
 @media (max-width: 860px) {
+  /* the notes are static here, so "Move them around" would be a lie */
+  #about .shead .r {
+    display: none;
+  }
   .dn-board {
     height: auto;
     padding: 18px;
