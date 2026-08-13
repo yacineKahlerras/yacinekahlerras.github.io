@@ -3,11 +3,12 @@ export default function HeaderSection() {
     <header className="hero wrap">
       <div className="hero-in">
         <h1>
-          Full-stack developer moving <span className="g">fast</span>
+          Hello. I <span className="g">make things</span>.
         </h1>
         <p className="lede">
-          I work with startups to build products that look good, feel smooth,
-          and actually get users to stick around.
+          I&apos;m Yacine, a full-stack developer. Web, desktop, mobile,
+          whatever fits. Starting something is easy. I&apos;m here for the
+          finishing.
         </p>
         <div className="cta">
           <a className="btn p" href="#work">

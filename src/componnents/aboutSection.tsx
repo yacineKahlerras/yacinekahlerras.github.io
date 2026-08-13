@@ -3,13 +3,18 @@
 import { useEffect, useRef } from "react";
 import { aboutNotes } from "@/data/siteData";
 
-/** starting arrangement — overlapping slightly, like a real pinboard */
+/**
+ * Starting arrangement. Spread across the FULL board width — the earlier
+ * values topped out at x:.52, which piled every note into the left half and
+ * left an obvious empty right side. A note is ~.27 of the board wide, so the
+ * usable x range is 0 → ~.72.
+ */
 const SPOTS = [
-  { x: 0.04, y: 0.06, r: -2.2 },
-  { x: 0.52, y: 0.02, r: 1.8 },
-  { x: 0.1, y: 0.46, r: 1.4 },
-  { x: 0.46, y: 0.38, r: -1.6 },
-  { x: 0.24, y: 0.72, r: 0.9 },
+  { x: 0.08, y: 0.05, r: -2.2 },
+  { x: 0.6, y: 0.04, r: 1.8 },
+  { x: 0.34, y: 0.33, r: -1.1 },
+  { x: 0.06, y: 0.58, r: 1.4 },
+  { x: 0.63, y: 0.56, r: -1.6 },
 ];
 
 export default function AboutSection() {
@@ -112,14 +117,13 @@ export default function AboutSection() {
     <section id="about" className="wrap">
       <div className="shead">
         <div>
-          <div className="kick">Crew</div>
-          <h2>About</h2>
+          <div className="kick">About</div>
+          <h2>
+            I build the thing you keep <b>almost</b> shipping.
+          </h2>
         </div>
         <span className="r">Move them around</span>
       </div>
-      <p className="dn-lead">
-        I build the thing you keep <b>almost</b> shipping.
-      </p>
       <div className="dn-sub">Five things worth knowing</div>
       <div className="dn-board" ref={boardRef}>
         {aboutNotes.map((note) => (

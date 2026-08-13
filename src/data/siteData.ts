@@ -16,47 +16,80 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "Trending Content",
-    year: "2024",
+    title: "GameOn Management",
+    year: "2026",
     blurb:
-      "News aggregator pulling live Google News headlines, categorised and tunable by region and article volume. Stripe for payments, Firebase Auth for accounts.",
-    stack: ["Next.js", "Stripe", "Firebase"],
-    url: "https://trendingcontent.com/",
-    image: "./images/projects/trending-content.png",
-    tools: ["Next.js", "React", "Node.js", "Firebase"],
+      "Offline-first management for a gaming lounge. Timed sessions on PCs and consoles, a snack POS, cash/card/debt checkout, and a per-PC lock agent. Runs with the internet completely unplugged: no cloud, no accounts, no fees. ~255 automated tests.",
+    stack: ["React", "FastAPI", "SQLite", "PySide6"],
+    url: "https://github.com/yacineKahlerras/gameon-management",
+    image: "./images/projects/gameon-management.png",
+    tools: ["React", "TypeScript", "FastAPI", "SQLite", "Python"],
   },
   {
-    title: "Radio Stations AI",
-    year: "2024",
+    title: "Zayer Budgeting",
+    year: "2026",
     blurb:
-      "Generates scripts with GPT, converts them to speech, and compiles the audio into playlists stored securely in Firebase.",
-    stack: ["Next.js", "GPT", "Tailwind"],
-    url: "https://radiostation.ai/news",
-    image: "./images/projects/radiostation.png",
-    tools: ["Next.js", "Tailwind", "Node.js", "Firebase", "Python"],
+      "A fast, private, offline-first budgeting app for tracking money across wallets and currencies. Balances are derived from the ledger, never edited behind your back. No accounts, no sync, everything on-device. 184 tests passing.",
+    stack: ["React Native", "Expo", "SQLite"],
+    url: "https://github.com/yacineKahlerras/zayer-budgeting",
+    image: "./images/projects/zayer-budgeting.png",
+    tools: ["React Native", "TypeScript", "SQLite"],
   },
 ];
 
-export type ToolGroup =
-  | "Frontend"
-  | "Backend"
-  | "Data"
-  | "Infra"
-  | "Language";
+export type ToolGroup = "Frontend" | "Backend" | "Data" | "Infra" | "Language";
 
 export type Tool = { name: string; group: ToolGroup; note: string };
 
 export const tools: Tool[] = [
-  { name: "Next.js", group: "Frontend", note: "App router and SSR — my default for new builds" },
-  { name: "React", group: "Frontend", note: "Where most of my UI thinking lives" },
-  { name: "Tailwind", group: "Frontend", note: "Styling without leaving the markup" },
+  {
+    name: "Next.js",
+    group: "Frontend",
+    note: "App router and SSR, my default for new builds",
+  },
+  {
+    name: "React",
+    group: "Frontend",
+    note: "Where most of my UI thinking lives",
+  },
+  {
+    name: "React Native",
+    group: "Frontend",
+    note: "One codebase, both app stores",
+  },
+  {
+    name: "Tailwind",
+    group: "Frontend",
+    note: "Styling without leaving the markup",
+  },
   { name: "Node.js", group: "Backend", note: "Services, scripts and glue" },
-  { name: "NestJS", group: "Backend", note: "When a project needs real structure" },
+  { name: "FastAPI", group: "Backend", note: "Python APIs with real speed" },
   { name: "Express", group: "Backend", note: "Small APIs, quickly" },
-  { name: "MongoDB", group: "Data", note: "Document stores and fast iteration" },
-  { name: "PostgreSQL", group: "Data", note: "When the data has real relationships" },
-  { name: "Firebase", group: "Infra", note: "Auth, storage and hosting on client work" },
-  { name: "Python", group: "Language", note: "Scripting, data wrangling, AI glue" },
+  {
+    name: "SQLite",
+    group: "Data",
+    note: "Local-first storage that just works",
+  },
+  {
+    name: "PostgreSQL",
+    group: "Data",
+    note: "When the data has real relationships",
+  },
+  {
+    name: "Firebase",
+    group: "Infra",
+    note: "Auth, storage and hosting on client work",
+  },
+  {
+    name: "Python",
+    group: "Language",
+    note: "Scripting, data wrangling, AI glue",
+  },
+  {
+    name: "TypeScript",
+    group: "Language",
+    note: "Every new project starts typed",
+  },
 ];
 
 /** tools genuinely used together — these become the graph's edges */
@@ -65,14 +98,17 @@ export const toolEdges: [string, string][] = [
   ["Next.js", "Tailwind"],
   ["Next.js", "Node.js"],
   ["Node.js", "Express"],
-  ["Node.js", "NestJS"],
-  ["Express", "MongoDB"],
-  ["NestJS", "PostgreSQL"],
   ["Next.js", "Firebase"],
   ["Firebase", "Node.js"],
   ["Python", "Node.js"],
   ["React", "Tailwind"],
-  ["MongoDB", "Node.js"],
+  ["FastAPI", "Python"],
+  ["SQLite", "FastAPI"],
+  ["React Native", "React"],
+  ["TypeScript", "React"],
+  ["TypeScript", "React Native"],
+  ["TypeScript", "Node.js"],
+  ["PostgreSQL", "Node.js"],
 ];
 
 export const GROUP_COLORS: Record<ToolGroup, string> = {

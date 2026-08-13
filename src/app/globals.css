@@ -104,11 +104,11 @@ p {
 }
 
 .bar a.lnk {
-  padding: 8px 17px;
+  padding: 9px 19px;
   border-radius: 999px;
   color: var(--ink-2);
   text-decoration: none;
-  font-size: 12.5px;
+  font-size: 13.5px;
   transition: color 0.22s, background 0.22s;
 }
 .bar a.lnk:hover {
@@ -125,9 +125,9 @@ p {
 }
 
 .bar .go {
-  padding: 8px 17px;
+  padding: 9px 19px;
   border-radius: 999px;
-  font-size: 12.5px;
+  font-size: 13.5px;
   font-weight: 600;
   text-decoration: none;
   margin-left: 4px;
@@ -150,7 +150,8 @@ p {
 
 /* ---------- hero ---------- */
 .hero {
-  padding: 58px 0 74px;
+  /* vh-based padding so the hero holds real presence on tall/wide screens */
+  padding: clamp(58px, 9vh, 120px) 0 clamp(74px, 12vh, 150px);
   position: relative;
   text-align: center;
 }
@@ -172,19 +173,20 @@ p {
   );
 }
 .hero-in {
-  max-width: 720px;
+  /* wide enough for the one-line headline at its 84px cap */
+  max-width: 940px;
   margin: 0 auto;
   position: relative;
 }
 
 h1 {
-  font-size: clamp(36px, 6.4vw, 68px);
-  line-height: 1.03;
+  /* single line: nowrap, and the vw scale keeps it fitting at every width */
+  font-size: clamp(26px, 8vw, 84px);
+  white-space: nowrap;
+  line-height: 1.06;
   letter-spacing: -0.036em;
   font-weight: 600;
-  margin: 0 auto 20px;
-  max-width: 16ch;
-  text-wrap: balance;
+  margin: 0 auto 22px;
   text-shadow: 0 2px 30px rgba(3, 4, 10, 0.92);
 }
 h1 .g {
@@ -194,9 +196,9 @@ h1 .g {
 
 .lede {
   color: var(--ink-2);
-  font-size: 17px;
-  max-width: 52ch;
-  margin: 0 auto 30px;
+  font-size: clamp(17px, 1.4vw, 21px);
+  max-width: 54ch;
+  margin: 0 auto 34px;
   text-shadow: 0 2px 20px rgba(3, 4, 10, 0.9);
 }
 
@@ -294,6 +296,12 @@ section {
   font-size: clamp(24px, 3.6vw, 34px);
   letter-spacing: -0.026em;
   font-weight: 600;
+  max-width: 24ch;
+  text-wrap: balance;
+}
+.shead h2 b {
+  color: var(--warp);
+  font-weight: 600;
 }
 .shead .r {
   margin-left: auto;
@@ -320,7 +328,10 @@ section {
   position: relative;
   text-decoration: none;
   color: var(--ink);
-  display: block;
+  /* column flex so .body can stretch and pin "View source" to the bottom
+     even when the two cards' blurbs differ in length */
+  display: flex;
+  flex-direction: column;
   border-radius: 18px;
   overflow: hidden;
   border: 1px solid var(--edge);
@@ -378,7 +389,9 @@ section {
 }
 
 .port .body {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
   padding: 18px 20px 20px;
 }
 .port .row1 {
@@ -409,6 +422,9 @@ section {
   display: flex;
   gap: 6px;
   flex-wrap: wrap;
+  /* chips carry the auto margin so they pin to the card's bottom,
+     with "View source" at a fixed distance directly beneath them */
+  margin-top: auto;
 }
 .port .chips span {
   font-family: var(--mono);
@@ -424,7 +440,9 @@ section {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  margin-top: 14px;
+  /* fixed gap below the pinned chips row */
+  margin-top: 0;
+  padding-top: 14px;
   font-family: var(--mono);
   font-size: 11px;
   letter-spacing: 0.13em;
@@ -445,7 +463,10 @@ section {
   width: 100%;
   height: 460px;
   cursor: grab;
-  touch-action: none;
+  /* pan-y, not none: `none` swallowed every touch gesture, so starting a
+     scroll on this (full-width, 460px tall) canvas trapped the page.
+     pan-y lets vertical swipes scroll through while node-drags still work. */
+  touch-action: pan-y;
 }
 #mcgraph.grabbing {
   cursor: grabbing;
@@ -527,19 +548,6 @@ section {
 }
 
 /* ---------- about: draggable notes ---------- */
-.dn-lead {
-  font-size: clamp(24px, 3.7vw, 40px);
-  line-height: 1.2;
-  letter-spacing: -0.03em;
-  font-weight: 500;
-  margin-bottom: 8px;
-  max-width: 20ch;
-  text-wrap: balance;
-}
-.dn-lead b {
-  color: var(--warp);
-  font-weight: 600;
-}
 .dn-sub {
   color: var(--ink-3);
   font-family: var(--mono);
@@ -580,7 +588,7 @@ section {
   padding: 22px 20px 20px;
   border: 1px solid var(--edge);
   cursor: grab;
-  touch-action: none;
+  touch-action: pan-y; /* same trap as the graph: scroll must pass through */
   user-select: none;
   background: linear-gradient(
     160deg,
@@ -647,6 +655,7 @@ section {
     top: auto !important;
     transform: none !important;
     cursor: default;
+    touch-action: auto; /* static on mobile — never intercept scrolling */
   }
   .dn-hint {
     display: none;

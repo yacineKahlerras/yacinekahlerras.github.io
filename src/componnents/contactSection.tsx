@@ -52,7 +52,7 @@ export default function ContactSection() {
           className={`door primary${state === "copied" ? " copied" : ""}`}
           onClick={copy}
         >
-          <span className="num">01 — Fastest</span>
+          <span className="num">01 · Fastest</span>
           <h3>Email</h3>
           <p>
             Best for actual projects. Include a sentence about the deadline if
@@ -68,7 +68,7 @@ export default function ContactSection() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <span className="num">02 — Formal</span>
+          <span className="num">02 · Formal</span>
           <h3>LinkedIn</h3>
           <p>
             If you&apos;d rather see the work history first, or your company
@@ -84,7 +84,7 @@ export default function ContactSection() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <span className="num">03 — Technical</span>
+          <span className="num">03 · Technical</span>
           <h3>GitHub</h3>
           <p>
             For the developers doing due diligence. The code is the interview.

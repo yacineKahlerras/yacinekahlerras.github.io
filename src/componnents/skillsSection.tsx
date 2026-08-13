@@ -432,7 +432,7 @@ export default function SkillsSection() {
         />
         <div className="mc-card" ref={cardRef} />
         <span className="mc-hint">
-          Diamonds are projects — grab one and throw it
+          Diamonds are projects. Grab one and throw it
         </span>
       </div>
     </section>
