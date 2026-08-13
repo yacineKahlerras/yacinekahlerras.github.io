@@ -41,10 +41,6 @@ export default function ContactSection() {
     <section id="contact" className="wrap">
       <div className="ct2-head">
         <h2>Three ways to reach me</h2>
-        <p>
-          Tell me what you&apos;re building and roughly when you need it. If
-          I&apos;m not the right fit I&apos;ll say so quickly.
-        </p>
       </div>
       <div className="doors">
         <button

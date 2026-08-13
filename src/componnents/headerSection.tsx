@@ -3,7 +3,7 @@ export default function HeaderSection() {
     <header className="hero wrap">
       <div className="hero-in">
         <h1>
-          Hello. I <span className="g">make things</span>.
+          Hi. I <span className="g">make things</span>.
         </h1>
         <p className="lede">
           I&apos;m Yacine, a full-stack developer. Web, desktop, mobile,
